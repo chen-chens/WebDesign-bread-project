@@ -1,0 +1,119 @@
+/* ==========================全域========================== */
+
+
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    outline: 1px solid red;
+}
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+}
+
+
+
+
+/* ==========================手機板========================== */
+
+/* header START */
+header{
+    width: 100%;
+    background-color: #202020;
+    color: #EFEEE9;
+    text-align: center;
+    height: 70px;
+    position: fixed;
+
+}
+header a{
+    display: inline-block;
+    line-height: 70px;
+}
+h1 span{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+h1 img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+.fas{
+    width: 50px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 70px;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+}
+.fa-shopping-cart{ left: 25px;}
+.fa-bars{ right: 25px;}
+
+
+.cart-number{
+    position: absolute;
+    top: 3px;
+    right: 0px;
+
+    width: 25px;
+    line-height: 25px;
+    border-radius: 50%;
+    background-color: pink;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+header::after{
+    content: '';
+    display: block;
+    width: 280px;
+    height: 180px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+    box-shadow: -100px 0px -140px red;
+}
+/* header END */
+
+/* banner START*/
+section{
+    width: 100%;
+    padding: 60px 25px;
+    background-color: #ccc;
+}
+
+h2{
+    font-size: 1.3rem;
+}
+strong{
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+}
+
+/* banner END*/
+
+
+/* ==========================平板========================== */
+
+
+@media screen and (min-width: 481px) {
+
+
+}
+
+/* ==========================電腦板========================== */
+
+
+@media screen and (min-width: 769px) {
+
+
+
+}
