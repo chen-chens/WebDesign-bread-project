@@ -1,0 +1,262 @@
+
+*{
+    text-decoration: none;
+    outline: 1px solid red;
+}
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+/* 手機板 全域 */
+
+.sm-area{
+    width: 100%;
+    padding: 1.2rem 0rem 2.5rem;
+}
+.container{
+    max-width: 300px;
+    margin: auto;
+    position: relative; 
+}
+h2{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.3rem 0rem;
+}
+
+
+/* <!-- sm-header START --> */
+.sm-header{
+    width: 100%;
+    background-color: #202020;
+    position: fixed;
+    z-index: 5;
+}
+.sm-header a{
+    display: block;
+}
+.sm-header h1 a{
+    width: 125px;
+    padding: 15px 0px;
+    margin: auto;
+}
+.sm-header h1 img{
+    width: 100%;
+    vertical-align: middle;
+}
+.sm-header h1 span{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.sm-header .fas{
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    padding: 20px;
+}
+
+.sm-header .cart,
+.sm-header .bars{
+    position: absolute;
+    top:0;
+}
+.sm-header .cart{ left: 0;}
+.sm-header .bars{ right: 0;}
+
+.sm-header .cart-num{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #FFD4D4;
+    line-height: 25px;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #202020;
+    font-weight: 400;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+/* <!-- sm-header END --> */
+
+
+/* <!-- sm-banner START --> */
+.sm-banner{
+    width: 100%;
+    padding-top: 70px;
+}
+.sm-banner img{
+    width: 100%;
+    vertical-align: middle;
+}
+/* <!-- sm-banner END --> */
+
+
+/* <!-- story START --> */
+.story{
+    background-color: #EFEEE9;
+}
+.story .content{
+    text-align: justify;
+    line-height: 1.3rem;
+    color: #9E9E9E;
+}
+.story h5{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .6rem 0rem;
+}
+.story p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-indent: 2.2rem;
+    padding-bottom: 1.3rem;
+}
+
+.story .more,
+.story .close{
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: #FFD4D4;
+    text-align: center;
+    line-height: 80px;
+    font-size: .9rem;
+    letter-spacing: 0;
+    color: #d5b4b4;;
+    position: relative;
+}
+.story .more::after{
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 50%;
+    transform: translateX(50%);
+}
+.story .close::before{
+    content: "\f0d8";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 1.3rem;
+    right: 50%;
+    transform: translateX(50%);
+}
+/* <!-- story END --> */
+
+
+/* <!-- intro START --> */
+.intro{
+    background-color: #202020;
+    color: #fff;
+}
+.intro .item{
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.intro .sum-box{
+    display: inline-block;
+    width: 170px;
+    position: absolute;
+    z-index: 1;
+    top: -3.5rem;
+    right: 3.75rem;
+}
+.intro .sum-box::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.sum-box span{
+    display: block;
+    width: 45%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9rem;
+    line-height: 8rem;
+    float: left;
+}
+.sum-box h4,
+.sum-box p{
+    display: inline-block;
+    width: 55%;
+}
+.sum-box h4{
+    font-size: 1.9rem;
+    line-height: 3.5rem;
+}
+.sum-box h4::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #737373;
+}
+.sum-box p{
+    font-size: 1.25rem;
+    letter-spacing: .2rem;
+    padding: 1rem 0rem;
+}
+
+.intro .pic{
+    width: 18.75rem;
+    height: 12.5rem;
+    border-radius: 6.25rem;
+    overflow: hidden;
+    margin: 10rem 0rem 0rem;
+    position: relative;
+    left: -25%;
+}
+.intro .pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+.intro .tip{
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 6.25rem;
+    background-color: #FFD4D4;
+    color: #202020;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+    position: absolute;
+    bottom:-2.5rem;
+    right: 3.75rem;
+}
+
+
+
+/* <!-- intro END --> */
+
+
+/* ==========================平板========================== */
+
+
+@media screen and (min-width: 481px) {
+
+
+}
+
+/* ==========================電腦板========================== */
+
+
+@media screen and (min-width: 769px) {
+
+
+
+}
