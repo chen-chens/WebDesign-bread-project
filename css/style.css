@@ -2,13 +2,14 @@
 
 
 *{
-    font-family: 'Noto Sans TC', sans-serif;
     text-decoration: none;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 body{
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: 300;
+    letter-spacing: .1rem;
+
 }
 
 
@@ -16,19 +17,30 @@ body{
 
 /* ==========================手機板========================== */
 
-/* header START */
+section{
+    width: 100%;
+    padding: 60px 25px;
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1.3rem 0rem;
+}
+
+/* --------header START-------- */
 header{
     width: 100%;
     background-color: #202020;
-    color: #EFEEE9;
     text-align: center;
-    height: 70px;
     position: fixed;
-
+    z-index: 3;
 }
 header a{
     display: inline-block;
-    line-height: 70px;
+    /* line-height: 70px; */
+    background-color: rgba(255,0,0,0.6);
 }
 h1 span{
     position: absolute;
@@ -36,29 +48,33 @@ h1 span{
     height: 1px;
     overflow: hidden;
 }
+h1 a{
+    width: 125px;
+    height: 40px;
+    padding: 15px 0px;
+} 
 h1 img{
     width: 100%;
     vertical-align: middle;
 }
 
+.cart, .bars{
+    position: absolute;
+    top: 0px;
+}
+.cart{ left: 0px;}
+.bars{ right: 0px;}
+
 .fas{
-    width: 50px;
     font-size: 30px;
     font-weight: 300;
     line-height: 70px;
     color: #fff;
-    position: absolute;
-    top: 0px;
+    padding:0px 20px;
+    vertical-align: top;
 }
-.fa-shopping-cart{ left: 25px;}
-.fa-bars{ right: 25px;}
-
 
 .cart-number{
-    position: absolute;
-    top: 3px;
-    right: 0px;
-
     width: 25px;
     line-height: 25px;
     border-radius: 50%;
@@ -66,8 +82,11 @@ h1 img{
     color: #000;
     font-weight: 400;
     font-size: 1.2rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
-header::after{
+/* header::after{
     content: '';
     display: block;
     width: 280px;
@@ -79,26 +98,145 @@ header::after{
     bottom: -50px;
     z-index: -1;
     box-shadow: -100px 0px -140px red;
-}
-/* header END */
+} */
+/* --------header END-------- */
 
-/* banner START*/
-section{
+
+/* --------banner START-------- */
+.banner{
+    padding: 70px 0px 0px 0px;
+}
+.banner img{
     width: 100%;
-    padding: 60px 25px;
-    background-color: #ccc;
+    vertical-align: middle;
 }
+/* --------banner END-------- */
 
-h2{
-    font-size: 1.3rem;
+
+/* --------story START-------- */
+.story{
+   background-color: #EFEEE9;
 }
-strong{
-    font-size: 1rem;
+.story .content{
+    color: #9e9e9e;
+}
+.story p{
+    text-align: justify;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+    text-indent: 2.3rem;
+}
+.story strong{
     font-weight: 400;
     display: block;
+    padding: .6rem 0rem;
+}
+.story .more{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    font-size: .8rem;
+    line-height: 80px;
+    text-align: center;
+    color: brown;
+    border-radius: 50%;
+    background-color: #FFD4D4;
+
+}
+/* --------story END-------- */
+
+/* --------intro START-------- */
+.intro{
+    background-color: #202020;
+    padding: 60px 0px;
+}
+.intro .item{
+    margin-bottom: 40px;
+    direction: rtl;
+}
+.intro h2{
+    color: #fff;
+}
+.item .fig-box{
+    position: relative;
+}
+.fig-box::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.fig-box .summary{
+    width: 160px;
+    color: #fff;
+    position: relative;
+    right: 0;;
+    top: 70px;
+    z-index: 1;
+}
+.fig-box span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 9rem;
+    display: inline-block;
+    width: 45%;
+    float: left;
+}
+.summary h4,
+.summary p{
+    display: inline-block;
+    width: 55%;
+}
+.summary h4{
+    font-size: 1.9rem;
+    line-height: 4rem;
+}
+.summary h4::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #737373;
+}
+.summary p{
+    font-size: 1.2rem;
+    padding: 1rem 0rem;
+}
+.fig-box .summary::after{
+    content: '';
+    display: block;
+    clear: both;
 }
 
-/* banner END*/
+.fig-box .pic{
+    width: 300px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+    left: -25%;
+}
+.fig-box .pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+.fig-box .tip{
+    display: inline-block;
+    padding: 1.9rem;
+    border-radius: 100px;
+    background-color: #FFD4D4;
+    line-height: 1.2rem;
+    position: relative;
+    left: 45%;
+    top: -50px;
+}
+.intro .item:nth-child(odd){
+    padding-right: 60px;
+}
+
+/* --------intro END-------- */
+
+
+
 
 
 /* ==========================平板========================== */
