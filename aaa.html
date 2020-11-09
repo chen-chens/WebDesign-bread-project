@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>        
+        *{
+            text-decoration: none;
+            outline: 1px solid red; 
+        }
+        body{
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+            letter-spacing: .1rem;
+        }
+
+        /* 手機板 全域 */
+
+        .section{
+            width: 100%;
+            /* padding: 1.2rem 0rem 2.5rem; */
+            padding: 2.5rem 0rem;
+        }
+        .container{
+            max-width: 300px;
+            margin: auto;
+            position: relative; 
+        }
+        .content{
+            padding: 1rem 0rem;
+        }
+        h2{
+            color: #7B6F5A;
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 1.3rem 0rem;
+        }
+
+        /* <!-- intro START --> */
+        .intro{
+            background-color:#202020;
+        }
+        .intro .container{
+            max-width: 100%;
+            overflow: hidden;
+
+        }
+        .intro h2{
+            color: #fff;
+        }
+        .intro .fig-group{
+            width: 400px;
+            margin: 0 auto 4rem;
+            padding: 4rem 0rem;
+            text-align: center;
+            position: relative;
+        }
+        .intro .sum-box{
+            color: #fff;
+            font-size: 0;
+            display: inline-block;
+            position: absolute;
+            top: 0rem;
+            left: 38%;
+            z-index: 2;
+        }
+        .intro .item:nth-child(even) .sum-box{
+            direction: rtl;
+            top: 0rem;
+            left: 10%;
+        }
+        .intro span,
+        .intro .point{
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+        }
+        .intro .item:nth-child(even) span,
+        .intro .item:nth-child(even) .point{
+            text-align: right;
+        }
+        .intro span{
+            font-size: 8.75rem;
+            font-weight: 400;
+        }
+        .intro .point h5{
+            font-size: 1.875rem;
+            font-weight: 400;
+            line-height: 4rem;
+        }
+        .intro .point h5::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            border-radius: 10px;
+            background-color: #737373;
+        }
+        .intro .point p{
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            padding: 1rem 0rem;
+        }
+
+        .intro .pic{
+            width: 18.75rem;
+            height: 12.5rem;
+            border-radius: 6.25rem;
+            overflow: hidden;
+            position: relative;
+            left: -20%;
+        }
+        .intro .item:nth-child(even) .pic{
+            width: 12.5rem;
+            height: 12.5rem;
+            border-radius: 50%;
+            left: 40%;
+            z-index: 1;
+        }
+        .intro .pic img{
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .intro .tip{
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.3rem;
+            padding: 2rem;
+            background-color: #FFD4D4;
+            border-radius: 6.25rem;
+            position: absolute;
+            bottom: 0rem;
+            left: 35%;
+        }
+        .intro .item:nth-child(even) .tip{
+            background-color: #ffd4d4ad;
+            width: 7.5rem;
+            height: 7.5rem;
+            text-align: center;
+            color: #fff;
+            padding: 0;
+            border-radius: 50%;
+            left: 25%;
+            z-index: 0;
+        }
+        .intro .item:nth-child(even) .tip::before{
+            content: '';
+            display: inline-block;
+            width: 0%;
+            height: 100%;
+            vertical-align: middle;
+        }
+        .intro .item:nth-child(even) .tip p{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .intro .txt{
+            display: none;
+        }
+
+
+
+
+            /* pc */
+
+            /* @media screen and (min-width: 769px) {
+            .container{
+                width: 100%;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .intro .item .sum-box,
+            .intro .item .txt{
+                display: inline-block;
+            }
+
+
+            } */
+
+            
+
+        /* <!-- intro END --> */
+
+    </style>
+</head>
+<body>
+    
+    <!-- ////////////////////////麵包製成 開始//////////////////////// -->
+    <!-- intro START -->
+    <section class="section intro">
+        <div class="container">
+            <div class="title">
+                <h2>麵包製成</h2>
+            </div>
+            <ol class="content">
+                <li class="item">
+                    <div class="fig-group">
+                        <div class="sum-box">
+                            <span>1</span>
+                            <div class="point">
+                                <h5>醒麵</h5>
+                                <p>伸展搓揉<br>
+                                產生麵筋
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pic">
+                             <img src="img/phone/bread-intro1.jpg" alt="步驟1醒麵">
+                        </div>
+                        <div class="tip">
+                            <p>
+                                好吃的秘訣一<br>
+                                麵包越嚼越香
+                            </p>
+                        </div>    
+                    </div>
+
+                    <div class="txt">
+                        <p>
+                            採用日本進口天然麵粉，並運用天然酵母全程自然發酵，堅持製程中不放入膨鬆劑、香料、發粉、防腐劑等對人體造成負擔之添加物。大小朋友都能安心享用。
+                        </p>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="fig-group">
+                        <div class="sum-box">
+                            <span>2</span>
+                            <div class="point">
+                                <h5>發酵</h5>
+                                <p>靜置等待<br>
+                                麵團膨脹
+                                </p>
+                            </div>
+                        </div>
+                        <div class="pic">
+                             <img src="img/phone/bread-intro2.jpg" alt="步驟2發酵">
+                        </div>
+                        <div class="tip">
+                            <p>
+                                淡淡的麥香<br>
+                                不是撲鼻香
+                            </p>
+                        </div>    
+                    </div>
+
+                    <div class="txt">
+                        <p>
+                            採用日本進口天然麵粉，並運用天然酵母全程自然發酵，堅持製程中不放入膨鬆劑、香料、發粉、防腐劑等對人體造成負擔之添加物。大小朋友都能安心享用。
+                        </p>
+                    </div>
+                </li>
+                
+            </ol>
+        </div>
+    </section>
+    <!-- intro END -->
+    <!-- ////////////////////////麵包製成 結束//////////////////////// -->
+</body>
+</html>
