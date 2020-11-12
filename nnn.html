@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            background-color: #ccc;
+            width: 300px;
+
+        }
+        .item::before{
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .txt{
+            background-color: pink;
+            display: inline-block;
+
+            vertical-align: middle;
+
+
+        }
+    </style>
+</head>
+<body>
+    <section class="section retail-outlet">
+        <div class="container">
+            <div class="topic">
+                <h2>門市據點</h2>
+            </div>
+            <div class="content">
+                <div class="item">
+
+                    <div class="txt">
+                        <h3>桃園健行總店</h3>
+                        <ul>
+                            <li>電話:03-458-6226</li>
+                            <li>地址:桃園市中壢區龍岡路二段12號</li>
+                            <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
