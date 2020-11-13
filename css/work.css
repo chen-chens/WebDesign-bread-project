@@ -1,7 +1,7 @@
 
 *{
     text-decoration: none;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
 body{
     font-family: 'Noto Sans TC', sans-serif;
@@ -75,7 +75,7 @@ input[type="submit"]{
     display: block;
 }
 
-
+    /* 不規則圖案 */
 .sm-header h1{
     position: relative;
 }
@@ -93,6 +93,8 @@ input[type="submit"]{
     box-shadow: -70px -30px 0px 30px #202020,
                 130px -95px 0px 120px #202020;
 }
+    /* 不規則圖案 */
+
 .sm-header h1 a{
     width: 125px;
     padding: 15px 0px;
@@ -109,7 +111,6 @@ input[type="submit"]{
     overflow: hidden;
 }
 
-
 .sm-header .cart,
 .sm-header .bars{
     position: absolute;
@@ -117,7 +118,6 @@ input[type="submit"]{
 }
 .sm-header .cart{ left: 0;}
 .sm-header .bars{ right: 0;}
-
 
 .sm-header .fas{
     font-size: 30px;
@@ -143,7 +143,6 @@ input[type="submit"]{
     top: 5px;
     right: 5px;
 }
-
 /* <!-- sm-header END --> */
 
 
@@ -170,6 +169,7 @@ input[type="submit"]{
     color: #9E9E9E;
 }
 
+    /* 不規則圖案 */
 .story .topic,
 .story .content{
     position: relative;
@@ -188,6 +188,7 @@ input[type="submit"]{
                  100px 30px 0px 30px #EFEEE9,
                  150px 30px 0px 30px #EFEEE9; 
 }
+    /* 不規則圖案 */
 
 .story h5{
     font-size: 1rem;
@@ -236,7 +237,6 @@ input[type="submit"]{
     right: 50%;
     transform: translateX(50%);
 }
-
 /* <!-- story END --> */
 
 
@@ -253,7 +253,6 @@ input[type="submit"]{
 }
 
     /* 排版 */
-
 .intro .fig-group{
     width: 100%;
     padding: 6rem 0rem 4rem;
@@ -271,6 +270,11 @@ input[type="submit"]{
     top: 0;
     z-index: 2;
 }
+.intro .item:nth-child(even) .sum-box{
+    direction: rtl;
+    right: 0;
+    left: 0;
+}
 .intro .tip{
     font-weight: 400;
     line-height: 1.3rem;
@@ -278,11 +282,6 @@ input[type="submit"]{
     background-color: #FFD4D4;
     border-radius: 6.25rem;
     bottom: 0;
-}
-.intro .item:nth-child(even) .sum-box{
-    direction: rtl;
-    right: 0;
-    left: 0;
 }
 .intro .item:nth-child(even) .tip{
     background-color: #ffd4d4ad;
@@ -292,7 +291,7 @@ input[type="submit"]{
     color: #fff;
     padding: 0;
     border-radius: 50%;
-    right: 50%;
+    right: 40%;
     z-index: 0;
 }
 .intro .pic{
@@ -348,6 +347,12 @@ input[type="submit"]{
     line-height: 1.5rem;
     padding: 1rem 0rem;
 }
+.intro .item .txt{
+    color: #9E9E9E;
+    line-height: 1.3rem;
+    text-indent: 2.2rem;
+    padding: 1.3rem 0rem;
+}
 
     /* 垂直置中 */
 .intro .item:nth-child(even) .tip::before{
@@ -361,12 +366,6 @@ input[type="submit"]{
     vertical-align: middle;
 }
 
-.intro .item .txt{
-    color: #9E9E9E;
-    line-height: 1.3rem;
-    text-indent: 2.2rem;
-    padding: 1.3rem 0rem;
-}
 /* <!-- intro END --> */
 
 
@@ -411,9 +410,6 @@ input[type="submit"]{
 
 
 /* <!-- news START --> */
-.news .section{
-    padding-top: 0;
-}
 .news{
     background-color:rgb(218, 212, 202,.6);
 }
@@ -424,9 +420,10 @@ input[type="submit"]{
 .news .summary{
     display: none;
 }
-
-.news h4 a{
+.news a{
     display: block;
+}
+.news h4 a{
     background-color: rgb(218, 212, 202,.6);
     border-bottom:2px solid #fff ;
     box-sizing: border-box;
@@ -791,53 +788,42 @@ input[type="submit"]{
     }
 
     /* <!-- intro START --> */
-
     /* 排版 */
     .intro .item{
-        max-width: 800px;
+        max-width: 400px;
         margin: auto;
-        word-spacing: -5px;
     }
     .intro .item:nth-child(even){
         direction: rtl;
     }
-
-    .intro .item::after{
-        content: '';
-        display: block;
-        clear: both;
-    }
-    .intro .fig-group,
-    .intro .txt{
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .intro .fig-group{
-        width: 32%;
-    }
-    .intro .txt{
-        width: 60%;
-    }
     .intro .txt p{
         padding: 2rem;
-        /* box-sizing: border-box; */
+        text-align: justify;
+    }
+    .intro .item:nth-child(even) .sum-box{
+        right: 0;
+        left: 0;
+        top: 10%;
+    }
+    .intro .item:nth-child(even) .tip{
+        right: 45%;
+        z-index: 0;
     }
     .intro .pic{
-        /* width: 18.75rem;
-        height: 12.5rem;
-        border-radius: 6.25rem;
-        overflow: hidden; */
+        width: 21.25rem;
+        height: 14.375rem;
+        border-radius: 7rem;
+        overflow: hidden;
         position: relative;
-        /* right: 20%; */
+        right: 0%;
     }
     .intro .item:nth-child(even) .pic{
-        /* width: 12.5rem;
-        height: 12.5rem;
-        border-radius: 50%; */
-        right: -30%;
+        width: 15.625rem;
+        height: 15.625rem;
+        border-radius: 50%;
+        right: 0%;
         z-index: 1;
     }
-
     /* <!-- intro END --> */
 
     /* <!-- product START --> */
@@ -883,6 +869,56 @@ input[type="submit"]{
     }
     /* <!-- principle END --> */
 
+    /* <!-- news START --> */
+    .news .container{
+        max-width: 600px;
+    }
+    .news .item{
+        width: 100%;
+        position: relative;
+    }
+    /* .news .item:not(:first-child){
+        height: 175px;
+        overflow: hidden;
+
+    } */
+    .news .item + .item{
+        margin-top: 2rem;
+    }
+    .news .pic{
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        opacity: .6;
+        position: relative;
+    }
+    .news .pic img{
+        width: 100%;
+        vertical-align: middle;
+        transform: scale(1,1);
+        transition: 3s;
+    }
+    .news .pic a::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.4);
+    }
+    .news .txt{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .news h4 a{
+        background-color: rgb(218, 212, 202);
+        border-bottom:none ;
+    }
+    /* <!-- news END --> */
 
     /* <!-- subscribe START --> */
     .subscribe .topic{
@@ -944,6 +980,30 @@ input[type="submit"]{
         position: relative; 
     }
 
+/* <!-- intro START --> */
+
+    /* 排版 */
+    .intro .item{
+        max-width: 800px;
+        margin: auto;
+        word-spacing: -6px;
+    }
+    .intro .item:nth-child(even){
+        direction: rtl;
+    }
+    .intro .fig-group,
+    .intro .txt{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .intro .fig-group{
+        width: 50%;
+    }
+    .intro .txt{
+        width: 50%;
+        direction: ltr;
+    }
+    /* <!-- intro END --> */
 
     /* <!-- faith START --> */
     .faith{
@@ -965,11 +1025,58 @@ input[type="submit"]{
         padding: 2.5rem 0rem;
     }
     .principle .content{
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
     }
     /* <!-- principle END --> */
+
+    /* <!-- news START --> */
+    .news .container{
+        max-width: 1200px;
+    }
+    .news .content::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .news .item{
+        width: 46%;
+        margin: 0% 2%;
+        position: relative;
+        float: left;
+    }
+    .news .item:first-child::after{
+        content: '';
+        height: 100%;
+        border-left: 5px dashed #70707030;
+        position: absolute;
+        top: 0;
+        right: -5%; 
+    }
+    .news .item:not(:first-child){
+        float: right;
+    }
+    .news .item + .item{
+        margin-top: 0;
+    }
+
+    .news .item:not(:first-child){
+        height: 170px;
+        overflow: hidden;
+    }
+    /* .news .item:not(:first-child) img{
+        transform: scale(.5,.5);
+    } */
+    .news .pic img{
+        transform: scale(1,1);
+        transition: 3s;
+    }
+    .news .item:hover img{
+        transform: scale(1.2,1.2);
+    }
+
+    /* <!-- news END --> */
 
     /* <!-- product START --> */
     .product .item{
@@ -984,6 +1091,10 @@ input[type="submit"]{
     /* <!-- product END --> */
 
     /* <!-- media START --> */
+    .media{
+        max-width: 1920px;
+        margin: auto;
+    }
     .media .item{
         width: 50%;
         float: left;
@@ -992,14 +1103,12 @@ input[type="submit"]{
     .media .sns:not(:last-child){
         width: 25%;
     }
-
     /* <!-- media END --> */
 
     /* <!-- subscribe START --> */
     .subscribe input[type="email"]{
         width: 50%;
     }
-
     /* <!-- subscribe END --> */
 
 
@@ -1016,5 +1125,5 @@ input[type="submit"]{
     .retail-outlet .item + .item{
         margin-top: 1%;
     }
-
+    /* <!-- retail-outlet END--> */
 } 
