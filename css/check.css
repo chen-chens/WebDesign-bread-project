@@ -53,7 +53,8 @@ input::-webkit-inner-spin-button {
 input{
     /* -moz-appearance:textfield; */
 }
-input[type="submit"]{
+input[type="submit"],
+label{
     cursor: pointer;
 } 
 /* <!-- page-header START --> */
@@ -156,71 +157,81 @@ input[type="submit"]{
     top: 5px;
     right: 10px;
 }
-/* <!-- page-header END --> */
 
     /* main-nav START*/
-    #menu-controler{
-        position: absolute;
-        left: 0;
-    }
-    #menu-controler:checked ~ .page-header .main-nav{
-        top: 70px;
-    }
-    #menu-controler:checked ~ .page-header .fa-bars{
-        opacity: 0;
-    }
-    #menu-controler:checked ~ .page-header .fa-times{
-        opacity: 1;
-    }
-    .menu-btn span{
-        position: absolute;
-        opacity: 0;
-    }
-    .main-nav{
-        width: 100%;
-        height: 100vh;
-        background-color: #202020;  
-        text-align: center;
-        position: absolute;
-        top: -100vh;
-        transition: .5s;
-    }
-    .main-nav ~ label{
-        display: none;
-    }
-    .main-nav .cart-btn{
-        display: none;
-    }
-    .menu li{
-        border-bottom:1px solid #707070 ; 
-    }
-    .menu a{
-        /* font-size: 1rem; */
-        line-height: 4rem;
-        color: #fff;
-    }
+#menu-controler{
+    position: absolute;
+    left: 0;
+}
+#menu-controler:checked ~ .page-header .main-nav{
+    top: 70px;
+}
+#menu-controler:checked ~ .page-header .fa-bars{
+    opacity: 0;
+}
+#menu-controler:checked ~ .page-header .fa-times{
+    opacity: 1;
+}
+.menu-btn span{
+    position: absolute;
+    opacity: 0;
+}
+.main-nav{
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;  
+    text-align: center;
+    position: absolute;
+    top: -100vh;
+    transition: .5s;
+}
+.main-nav ~ label{
+    display: none;
+}
+.main-nav .cart-btn{
+    display: none;
+}
+.menu li{
+    border-bottom:1px solid #707070 ; 
+}
+.menu a{
+    /* font-size: 1rem; */
+    line-height: 4rem;
+    color: #fff;
+}
     /* main-nav END*/
 
     /* 購物車數量清單 */
-    #cart-controler,
-    .cart-btn span{
-        position: absolute;
-        right: 0;
-    }
-    .cart-btn span{
-        opacity: 0;
-    }
+#cart-controler,
+.cart-btn span{
+    position: absolute;
+    right: 0;
+}
+.cart-btn span{
+    opacity: 0;
+}
     /* 購物車數量清單 */
 
     /* 手機版會員登入 */
-    #user-controler,
-    .user-btn span{
-      position: absolute;
-      top: 0; 
-      opacity: 0; 
-    }
-    
+#user-controler,
+.user-btn span{
+    position: absolute;
+    top: 0; 
+    opacity: 0; 
+} 
+.sm-user-form{
+    background-color: pink;
+}
+/* #user-controler:checked .sm-user-form{
+    z-index: 7;
+    opacity: 1;
+}  */
     /* 手機版會員登入 */
+.user-form{
+    display: none;
+}
+/* <!-- page-header END --> */
+
 
 
 /* <!-- sm-banner START --> */
@@ -439,6 +450,120 @@ input[type="submit"]{
     .user-btn .fa-user{
         font-weight: 900;
     }
+    /* 會員登入蓋版 */
+    .user-form{
+        display: block;
+        position: fixed;
+        z-index: -1;
+        height: 100vh;
+        background-color: #000000a3;
+        opacity: 0;
+        transition: ease-in-out .5s;
+    }
+    .user-form .container{
+        background-color: #EFEEE9;
+        max-width: 800px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        margin: auto;
+    }
+    .user-form .content{
+        width: 100%;
+        text-align: center;
+        padding: 1.3rem 0rem;
+    }
+    .user-form .content::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .user-form .item{
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+    .user-form form{
+        width: 70%;
+        padding: 0px 15%;
+    }
+    .user-form .item:first-child::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -2px;
+        border-left:4px dashed #70707018 ;
+    }
+    .user-form input{
+        width: 100%;
+        padding-left: 1rem;
+        box-sizing: border-box;
+        margin-bottom: 1.3rem;
+    }
+    .user-form input:nth-child(2){
+        margin-bottom: 0rem;
+    }
+    .user-form input[type="submit"]{
+        margin-top: 3rem;
+        color: #fff;
+        padding-left: 0rem;
+    }
+    .user-form .item:first-child input[type="submit"]{
+        background-color: #7B1B1B;
+    }
+    .user-form .item:last-child input[type="submit"]{
+        background-color: #008060;
+    }
+
+    .user-form .ps-memo{
+        font-size: .9rem;
+        line-height: 1.2rem;
+        margin-bottom: 1.3rem;
+    }
+    .user-form .ps-memo::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .ps-memo span{
+        float: left;
+        color: #707070;
+    }
+    .ps-memo a{
+        float: right;
+        text-decoration: underline;
+    }
+
+    /* 開關登入會員視窗 */
+    #user-controler:checked ~ .user-form{
+        z-index: 7;
+        opacity: 1;
+    }
+
+    .user-form .close-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .close-btn span{
+        position: absolute;
+        opacity: 0;
+    }
+    .close-btn .fa-times{
+        font-size: 30px;
+        font-weight:300;
+        color: #70707032;
+        padding: 20px;
+        transition: color .3s;
+    }
+    .close-btn:hover .fa-times{
+        color: #AA4F01;
+    }
+
+
 
 
 
