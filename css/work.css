@@ -53,7 +53,7 @@ input::-webkit-inner-spin-button {
 }
 /* 火狐 */
 input{
-    -moz-appearance:textfield;
+    /* -moz-appearance:textfield; */
 }
 input[type="submit"]{
     cursor: pointer;
@@ -61,7 +61,7 @@ input[type="submit"]{
 /* <!-- sm-header START --> */
 .sm-header{
     width: 100%;
-    background-color: #202020;
+    background-color: #20202011;
     position: fixed;
     z-index: 5;
 }
@@ -85,13 +85,13 @@ input[type="submit"]{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: #202020;
+    background-color: #20202011;
     position: absolute;
     left: 10%;
     bottom: -30%;
     z-index: -1;
-    box-shadow: -70px -30px 0px 30px #202020,
-                130px -95px 0px 120px #202020;
+    box-shadow: -70px -30px 0px 30px #20202011,
+                130px -95px 0px 120px #20202011;
 }
     /* 不規則圖案 */
 
@@ -112,12 +112,12 @@ input[type="submit"]{
 }
 
 .sm-header .cart,
-.sm-header .bars{
+.sm-header .menu{
     position: absolute;
     top:0;
 }
 .sm-header .cart{ left: 0;}
-.sm-header .bars{ right: 0;}
+.sm-header .menu{ right: 0;}
 
 .sm-header .fas{
     font-size: 30px;
@@ -145,6 +145,13 @@ input[type="submit"]{
 }
 /* <!-- sm-header END --> */
 
+    /* sm-main-nav START*/
+    .menu span{
+        position: absolute;
+        opacity: 0;
+    }
+
+    /* sm-main-nav END*/
 
 /* <!-- sm-banner START --> */
 .sm-banner{
@@ -445,10 +452,7 @@ input[type="submit"]{
 .news h4{
     font-size: 1.1rem;
 }
-.news .item:hover h4 a{
-    color: #fff;
-    background-color: #7B6F5A;
-}
+
 .news time{
     font-size: .8rem;
     padding-left: .5rem;
@@ -875,48 +879,53 @@ input[type="submit"]{
     }
     .news .item{
         width: 100%;
-        position: relative;
+        border: 1px solid #DAD4CA;
+        box-sizing: border-box;
     }
-    /* .news .item:not(:first-child){
-        height: 175px;
-        overflow: hidden;
-
-    } */
     .news .item + .item{
         margin-top: 2rem;
     }
-    .news .pic{
+    .news .item::after{
+        content: '';
         display: block;
-        width: 100%;
-        overflow: hidden;
-        opacity: .6;
+        clear: both;
+    }
+    .news .pic,
+    .news .summary{
+        display: block;
+    }
+    .news .pic,
+    .news .txt{
+        float: left;
+    }
+    .news .txt{ 
+        width: 68%;
+        margin-left: 2%;
+    }
+    .news .pic{ 
+        width: 30%;
         position: relative;
     }
+
     .news .pic img{
         width: 100%;
         vertical-align: middle;
-        transform: scale(1,1);
-        transition: 3s;
-    }
-    .news .pic a::before{
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.4);
-    }
-    .news .txt{
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
     }
     .news h4 a{
-        background-color: rgb(218, 212, 202);
+        line-height: 3rem;
+        background-color: #dad4ca;
         border-bottom:none ;
+    }
+    .news .summary{
+        padding: .3rem;
+        line-height: 1.1rem;
+        font-size: .9rem;
+        color: #707070;
+    }
+
+    .txt-more a::after{
+        position: absolute;
+        right: 2%;
     }
     /* <!-- news END --> */
 
@@ -1033,8 +1042,8 @@ input[type="submit"]{
 
     /* <!-- news START --> */
     .news .container{
-        max-width: 1200px;
-    }
+        max-width: 800px;
+    } /*
     .news .content::after{
         content: '';
         display: block;
@@ -1043,8 +1052,8 @@ input[type="submit"]{
     .news .item{
         width: 46%;
         margin: 0% 2%;
-        position: relative;
         float: left;
+        position: relative;
     }
     .news .item:first-child::after{
         content: '';
@@ -1059,22 +1068,46 @@ input[type="submit"]{
     }
     .news .item + .item{
         margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    .news .item:not(:first-child) .pic{
+        display: none;
     }
 
-    .news .item:not(:first-child){
-        height: 170px;
+    .news .pic,
+    .news .txt{ 
+        width: 100%;
+    }
+    .news .txt{
+        margin-left: 0;
+    } */
+
+    .news .pic{
         overflow: hidden;
     }
-    /* .news .item:not(:first-child) img{
-        transform: scale(.5,.5);
-    } */
     .news .pic img{
         transform: scale(1,1);
         transition: 3s;
     }
+
+    .news h4 a::after{
+        content: '\f30b';
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        font-size: 1.55rem;
+        vertical-align: middle;
+        position: absolute;
+        right: 3%;
+    }
+
     .news .item:hover img{
         transform: scale(1.2,1.2);
     }
+    .news .item:hover h4 a{
+        color: #fff;
+        background-color: #7B6F5A;
+    }
+
 
     /* <!-- news END --> */
 

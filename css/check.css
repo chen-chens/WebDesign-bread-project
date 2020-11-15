@@ -1,0 +1,446 @@
+*{
+    text-decoration: none;
+    outline: 1px solid red;
+}
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+
+/* 手機板 全域 */
+
+.section{
+    width: 100%;
+    padding: 2.5rem 0rem;
+}
+.container{
+    max-width: 285px;
+    margin: auto;
+    position: relative; 
+}
+.content{
+    padding-top: 1rem;
+}
+h2{
+    color: #7B6F5A;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.3rem 0rem;
+}
+input,button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 2.5rem;
+    font-size: .9rem;
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none; 
+    margin: 0; 
+}
+/* 火狐 */
+input{
+    /* -moz-appearance:textfield; */
+}
+input[type="submit"]{
+    cursor: pointer;
+} 
+/* <!-- page-header START --> */
+.page-header{
+    width: 100%;
+    background-color: #202020;
+    position: fixed;
+    z-index: 5;
+}
+.page-header .container{
+    max-width: 480px;
+}
+.page-header a{
+    display: block;
+}
+
+    /* 不規則圖案 */
+/* .page-header h1{
+    position: relative;
+}
+.page-header h1::after{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #20202011;
+    position: absolute;
+    left: 10%;
+    bottom: -30%;
+    z-index: -1;
+    box-shadow: -70px -30px 0px 30px #20202011,
+                130px -95px 0px 120px #20202011;
+} */
+    /* 不規則圖案 */
+
+    /* 蓋住下拉手機側選單 */
+.page-header h1{
+    background-color: #202020;
+    position: relative;
+    z-index: 6;
+}
+    /* 排版 */
+.page-header .menu-btn,
+.page-header .cart-btn{
+    position: absolute;
+    top:0;
+    z-index: 6;
+}
+.page-header .menu-btn{ left: 0;}
+.page-header .cart-btn{ right: 0;}
+.page-header .fas{
+    font-size: 30px;
+    font-weight:300;
+    color: #fff;
+    padding: 20px;
+}
+.cart-btn .fas.fa-shopping-cart{
+    padding-right: 25px;
+}
+.menu-btn .fas.fa-times{
+    padding:20px 23.75px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+    /* 細項 */
+.page-header h1 a{
+    width: 125px;
+    padding: 15px 0px;
+    margin: auto;
+}
+.page-header h1 img{
+    width: 100%;
+    vertical-align: middle;
+}
+.page-header h1 span{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.page-header .cart-num{
+    opacity: 1;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #FFD4D4;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #202020;
+    font-weight: 400;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+/* <!-- page-header END --> */
+
+    /* main-nav START*/
+    #menu-controler{
+        position: absolute;
+        left: 0;
+    }
+    #menu-controler:checked ~ .page-header .main-nav{
+        top: 70px;
+    }
+    #menu-controler:checked ~ .page-header .fa-bars{
+        opacity: 0;
+    }
+    #menu-controler:checked ~ .page-header .fa-times{
+        opacity: 1;
+    }
+    .menu-btn span{
+        position: absolute;
+        opacity: 0;
+    }
+    .main-nav{
+        width: 100%;
+        height: 100vh;
+        background-color: #202020;  
+        text-align: center;
+        position: absolute;
+        top: -100vh;
+        transition: .5s;
+    }
+    .main-nav ~ label{
+        display: none;
+    }
+    .main-nav .cart-btn{
+        display: none;
+    }
+    .menu li{
+        border-bottom:1px solid #707070 ; 
+    }
+    .menu a{
+        /* font-size: 1rem; */
+        line-height: 4rem;
+        color: #fff;
+    }
+    /* main-nav END*/
+
+    /* 購物車數量清單 */
+    #cart-controler,
+    .cart-btn span{
+        position: absolute;
+        right: 0;
+    }
+    .cart-btn span{
+        opacity: 0;
+    }
+    /* 購物車數量清單 */
+
+    /* 手機版會員登入 */
+    #user-controler,
+    .user-btn span{
+      position: absolute;
+      top: 0; 
+      opacity: 0; 
+    }
+    
+    /* 手機版會員登入 */
+
+
+/* <!-- sm-banner START --> */
+.sm-banner{
+    width: 100%;
+    padding-top: 70px;
+}
+.sm-banner img{
+    width: 100%;
+    vertical-align: middle;
+}
+/* <!-- sm-banner END --> */
+
+
+/* <!-- story START --> */
+.story{
+    background-color: #EFEEE9;
+    padding-top: 0;
+}
+.story .content{
+    text-align: justify;
+    line-height: 1.3rem;
+    color: #9E9E9E;
+}
+
+    /* 不規則圖案 */
+.story .topic,
+.story .content{
+    position: relative;
+    z-index: 2;
+}
+.story .container::before{
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: 30%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #EFEEE9;
+    box-shadow: -180px 60px 0px 130px #EFEEE9,
+                 100px 30px 0px 30px #EFEEE9,
+                 150px 30px 0px 30px #EFEEE9; 
+}
+    /* 不規則圖案 */
+
+.story h5{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .6rem 0rem;
+}
+.story p{
+    font-size: 1rem;
+    font-weight: 400;
+    text-indent: 2.2rem;
+    padding-bottom: 1.3rem;
+}
+
+.story .more,
+.story .close{
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: #FFD4D4;
+    text-align: center;
+    line-height: 80px;
+    font-size: .9rem;
+    letter-spacing: 0;
+    color: #d5b4b4;;
+    position: relative;
+}
+.story .more::after{
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 50%;
+    transform: translateX(50%);
+}
+.story .close::before{
+    content: "\f0d8";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 1.3rem;
+    right: 50%;
+    transform: translateX(50%);
+}
+/* <!-- story END --> */
+/* <!-- page-footer START --> */
+.page-footer{
+    background-color: #202020;
+    text-align: center;
+    font-size: 0;
+}
+.page-footer .content{
+    padding: .5rem 0rem 2rem;
+}
+.page-footer a{
+    display: block;
+}
+
+.social-link li{
+    display: inline-block;
+}
+
+.social-link .fab{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: .5rem;
+}
+.page-footer .copyright{
+    display: block;
+    font-size: .7rem;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1rem;
+
+}
+/* <!-- page-footer END --> */
+
+
+
+@media screen and (min-width: 481px) {
+    .container{
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        position: relative; 
+    }
+    /* <!-- page-header START --> */
+    .page-header .container{
+        max-width: 100%;
+    }
+    /* <!-- page-header END --> */
+}
+
+@media screen and (min-width: 769px) {
+
+    /* 電腦版 全域 */   
+    .container{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        position: relative; 
+    }
+    /* <!-- page-header START --> */
+    .page-header .container{
+        max-width: 1200px;
+    }
+    .page-header label,
+    .main-nav .social-link,
+    .menu li:first-child{
+        display: none;
+    }
+    .main-nav .cart-btn{
+        display: block;
+    }
+
+    .page-header h1{
+        display: inline-block;
+    }
+    .main-nav{
+        width: 75%;
+        top: 0;
+        right: 0;
+        height: 70px;
+    }
+    .menu{
+        width: 84%;
+    }
+    .menu::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .menu li{
+        width: 16.666666%;
+        float: left;
+        border-bottom: none; 
+    }
+    .menu a{
+        line-height: 70px;
+    }
+    .main-nav label{
+        display: block;
+        width: 8%;
+        box-sizing: border-box;
+    }
+    .main-nav .fas{
+        width: 100%;
+        line-height: 70px;
+        padding: 0;
+        font-size: 25px;
+    }
+    .cart-btn .fas.fa-shopping-cart{
+        padding-right: 0px;
+    }
+    .main-nav::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .main-nav .menu,
+    .main-nav .user-btn,
+    .main-nav .cart-btn{
+        position: relative;
+        float: left;
+    }
+
+    .user-btn .fa-user{
+        font-weight: 900;
+    }
+
+
+
+    /* <!-- page-header END --> */
+}
