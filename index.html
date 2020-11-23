@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>麥面包</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -330,7 +330,7 @@
                     <h2>最新消息<span id="to-news"></span></h2>
                 </div>
                 <div class="content">
-                    <div class="item">
+                    <div class="news-body item">
                         <div class="pic">
                             <a href="#">
                                 <img src="img/laptop/news1.jpg" alt="雙十連假營業時間調整">
@@ -338,17 +338,17 @@
                         </div>
                         <div class="txt"> 
                             <h4>  
-                                <a href="#">
+                                <a href="#" class="news-title">
                                     <time>2020.10.02</time>
                                     雙十連假營業時間調整
                                 </a>
                             </h4>
                             <p class="summary">
-                                麥面包貼心提醒您，因應中秋節及雙十連假，門市服務、出貨、電話客服調整...
+                                因應中秋節及雙十連假，門市服務、出貨、電話客服調整...
                             </p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="news-body item">
                         <div class="pic">
                             <a href="#">
                                 <img src="img/laptop/news2.jpg" alt="麥麵包移動餐車開跑!!!">
@@ -356,7 +356,7 @@
                         </div>
                         <div class="txt"> 
                             <h4>  
-                                <a href="#">
+                                <a href="#" class="news-title">
                                     <time>2020.07.26</time>
                                     麥麵包移動餐車開跑!!!
                                 </a>
@@ -366,7 +366,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="item">
+                    <div class="news-body item">
                         <div class="pic">
                             <a href="#">
                                 <img src="img/laptop/news3.jpg" alt="秋季最新產品亮相囉!!!">
@@ -374,13 +374,13 @@
                         </div>
                         <div class="txt"> 
                             <h4>  
-                                <a href="#">
+                                <a href="#" class="news-title">
                                     <time>2020.10.13</time>
                                     秋季最新產品亮相囉!!!
                                 </a>
                             </h4>
                             <p class="summary">
-                                麥面包史上最秋的葡萄歐麥已經在全台門市開賣啦!!即日起到實體店面購買，新品優惠...
+                                史上最秋的葡萄歐麥已經在全台門市開賣啦!!即日起到實體店面購買，新品優惠...
                             </p>
                         </div>
                     </div>
@@ -686,28 +686,14 @@
 
         </footer>
 
-        <script>
-            // 手機選單點擊錨點連結，選單消失(取消勾選)
-            var menu = document.getElementById('menu-toggle');
-            var closeIcon = document.getElementById("menu-controler");
-    
-            menu.addEventListener('click', handleMenuClick);
-    
-            function handleMenuClick(event) {
-            if (event.target instanceof HTMLAnchorElement) {
-                closeIcon.checked = false;
-                }
-            }
-    
-        </script>
-
-
-
-
-
 
     <!-- page-footer END -->
     <!-- ////////////////////////頁尾 結束//////////////////////// -->
+
+    <script src="js/script.js"></script>
+
+
+
     <!-- <div class="sm-user-form">
         <form class="log-in">
             <input type="tel" placeholder="請輸入手機號碼" required="required">

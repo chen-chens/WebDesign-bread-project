@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="css/cus2.css">
+</head>
+<body>
+
+<section class="user-form">   
+    <div class="form-structor">
+        <form class="login">
+            <label class="form-title" id="login">
+                <span><i class="fas fa-caret-down"></i></span>
+                登入會員
+            </label>
+            <div class="form-body">
+                <input type="email" placeholder="請輸入Email" required="required">
+                <input type="password" placeholder="請輸入6-15碼英數混合密碼" required="required">
+                <div class="ps-memo">
+                    <span>英文字母需區分大小寫</span>
+                    <a href="#">忘記密碼?</a>
+                </div>
+                <!-- <input type="checkbox" name="記住我的帳號" id=""> -->
+                <button class="submit-btn">登入會員</button>
+            </div>
+        </form>
+
+
+        <div class="btm-folder slide-up">
+            <form class="signup">
+                <label class="form-title" id="signup">
+                    <span><i class="fas fa-caret-up"></i></span>
+                    註冊會員
+                </label>
+                <div class="form-body">
+                    <input type="tel" placeholder="請輸入手機號碼" required="required">
+                    <input type="email" placeholder="請輸入Email" required="required">
+                    <input type="password" placeholder="請輸入密碼" required="required">
+                    <button class="submit-btn">註冊會員</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section> 
+
+
+    <script>
+        console.clear();
+
+        const loginBtn = document.getElementById('login');
+        const signupBtn = document.getElementById('signup');
+
+        signupBtn.addEventListener('click', (e) => {
+            let parent = e.target.parentNode.parentNode;
+            Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+                if(element !== "slide-up") {
+                    parent.classList.add('slide-up')
+                }else{
+                    loginBtn.parentNode.classList.add('slide-up')
+                    parent.classList.remove('slide-up')
+                }
+            });
+        });
+
+        loginBtn.addEventListener('click', (e) => {
+            let parent = e.target.parentNode;
+            Array.from(e.target.parentNode.classList).find((element) => {
+                if(element !== "slide-up") {
+                    parent.classList.add('slide-up')
+                }else{
+                    signupBtn.parentNode.parentNode.classList.add('slide-up')
+                    parent.classList.remove('slide-up')
+                }
+            });
+        });
+
+        
+
+
+        
+    </script>
+</body>
+</html>

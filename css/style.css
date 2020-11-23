@@ -247,7 +247,7 @@ h2 span{
 } 
     /* 手機版會員登入 */
 .user-form{
-    display: none;
+    /* display: none; */
 }
 /* <!-- page-header END --> */
 
@@ -522,24 +522,24 @@ h2 span{
 .news .container{
     max-width: 100%;
 }
-.news .pic,
-.news .summary{
+.news-body .pic,
+.news-body .summary{
     display: none;
 }
-.news a{
+.news-body a{
     display: block;
 }
-.news h4 a{
+.news-body .news-title{
     background-color: rgb(218, 212, 202,.6);
     border-bottom:2px solid #fff ;
     box-sizing: border-box;
-    line-height: 5rem;
     color: #9E9E9E;
     font-weight: 400;
+    padding: 2rem 0rem 2rem .5rem;
     transition: all .5s;
     position: relative;
 }
-.news h4 a::after{
+.news-body .news-title::after{
     content: '\f30b';
     font-family: "Font Awesome 5 Pro";
     font-weight: 400;
@@ -548,13 +548,13 @@ h2 span{
     position: absolute;
     right: 3%;
 }
-.news h4{
+.news-body h4{
     font-size: 1.1rem;
 }
 
-.news time{
+.news-body time{
     font-size: .8rem;
-    padding-left: .5rem;
+    /* padding-left: .5rem; */
 }
 
 .txt-more{
@@ -686,7 +686,8 @@ h2 span{
 .product input[type="number"]{ font: 1.2rem 'Noto Sans TC'; }
 .product .fas{
     width: 100%; 
-    line-height: 40px; }
+    line-height: 40px; 
+}
 
 .product input[type="submit"]{
     width: 48%;
@@ -873,8 +874,152 @@ h2 span{
 }
 /* <!-- page-footer END --> */
 
+/* ////////////////////////////////// 手機分頁 //////////////////////////////////// */
 
-/* ==========================平版========================== */
+/* <!-- main-news START --> */
+
+.page-news{
+    padding-top: 4.375rem;
+}
+.news-track ol{
+    word-spacing: -5px;
+    padding: 1rem 0rem;
+}
+.news-track li{
+    display: inline-block;
+}
+.news-track li:last-child a,
+.news-track li:hover a{
+    color: #AA4F01;
+}
+.news-track li:last-child a{
+    font-weight: 500;
+}
+.news-track a{
+    display: inline-block;
+    font-size: .85rem;
+    color: #545454;
+    line-height: 1.2rem;
+}
+.news-track li:not(:first-child)::before{
+    content: "/";
+    color: #545454;
+    font-size: .9rem;
+    font-weight: 500;
+    vertical-align: top;
+    padding: 0 .25rem;
+}
+.main-news .pic{
+    display: block;
+}
+.main-news .pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+.main-news .news-title::after{
+    display: none;
+}
+.main-news .news-title{
+    padding: 1rem 0rem;
+    border: none;
+}
+.main-news time{
+    display: block;
+    margin-bottom: 1rem;
+}
+.news-article{
+    padding: 1rem 0rem;
+    margin-bottom: 5rem;
+    text-indent: 2.2rem;
+    text-align: justify;
+    line-height: 1.3rem;
+    color: #545454;
+}
+.news-article strong{
+    display: block;
+    padding: 1rem 0rem;
+    text-indent: 0rem;
+    font-weight: 500;
+}
+.news-article span:first-child{
+    margin-top: .5rem;
+}
+.news-article span{
+    display: block;
+    line-height: 1.5rem;
+}
+.news-article span::before{
+    content: '\f0f3';
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    padding-right: .5rem;
+}
+.search{
+    position: relative;
+}
+.search input{
+    width: 100%;
+    border: 1px solid #c9c4bb;
+    padding-left: 1rem;
+    color: #737373;
+}
+.search button{
+    background-color: #DAD4CA;
+    height: calc(2.5rem - 2px );
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+.search .fas{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #7B6F5A;
+    padding: 0rem 1rem;
+}
+
+/* <!-- main-news END --> */
+
+
+/* <!-- other-news START --> */
+.other-news .item + .item{
+    margin-top: 2rem;
+}
+.other-news .content{
+    margin-bottom: 10rem;
+}
+.other-news h3{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+.other-news .news-title{
+    font-size: .9rem;
+    padding: 1rem 0rem 1rem .5rem;
+}
+.other-news .news-title::after{
+    content: '\f30b';
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    font-size: 1rem;
+}
+.other-news time{
+    display: block;
+    margin-bottom: 1rem;
+}
+.other-news .summary{
+    display: block;
+    padding: .3rem;
+    line-height: 1.1rem;
+    text-align: justify;
+    font-size: .9rem;
+    color: #707070;
+}
+
+/* <!-- other-news END --> */
+
+
+/* ////////////////////////////////// 手機分頁 //////////////////////////////////// */
+
+/* =====================================================平版===================================================== */
 
 
 @media screen and (min-width: 481px) {
@@ -885,7 +1030,7 @@ h2 span{
     } */
     .container{
         width: 100%;
-        max-width: 600px;
+        max-width: 460px;
         margin: auto;
         position: relative; 
     }
@@ -937,22 +1082,7 @@ h2 span{
     }
     /* <!-- intro END --> */
 
-    /* <!-- product START --> */
-    .product .content::after{
-        content: '';
-        display: block;
-        clear: both;
-    }
-    .product .item{
-        width: 46%;
-        margin: 2%;
-        box-sizing: border-box;
-        float: left;
-    }
-    .product .item + .item{
-        margin-top: 2%;
-    }
-    /* <!-- product END --> */
+
 
     /* <!-- faith START --> */
     .faith{
@@ -982,7 +1112,7 @@ h2 span{
 
     /* <!-- news START --> */
     .news .container{
-        max-width: 600px;
+        max-width: 460px;
     }
     .news .item{
         width: 100%;
@@ -992,38 +1122,44 @@ h2 span{
     .news .item + .item{
         margin-top: 2rem;
     }
-    .news .item::after{
+    .news-body::after{
         content: '';
         display: block;
         clear: both;
     }
-    .news .pic,
-    .news .summary{
+    .news-body .pic,
+    .news-body .summary{
         display: block;
     }
-    .news .pic,
-    .news .txt{
+    .news-body .pic,
+    .news-body .txt{
         float: left;
     }
-    .news .txt{ 
+    .news-body .txt{ 
         width: 68%;
         margin-left: 2%;
     }
-    .news .pic{ 
+    .news-body .pic{ 
         width: 30%;
         position: relative;
     }
 
-    .news .pic img{
+    .news-body .pic img{
         width: 100%;
         vertical-align: middle;
     }
-    .news h4 a{
-        line-height: 3rem;
-        background-color: #dad4ca;
+    .news-body .news-title{
+        font-size: 1rem;
+        padding: 1rem 0rem 1rem .5rem;
         border-bottom:none ;
     }
-    .news .summary{
+    .news-body .news-title::after{
+        content: '\f30b';
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    .news-body .summary{
         padding: .3rem;
         line-height: 1.1rem;
         font-size: .9rem;
@@ -1056,6 +1192,27 @@ h2 span{
     /* <!-- subscribe END --> */
 
 
+    /* <!-- product START --> */
+    .product .container{
+        max-width: 100%;
+    }
+    .product .content::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .product .item{
+        width: 46%;
+        margin: 2%;
+        box-sizing: border-box;
+        float: left;
+    }
+    .product .item + .item{
+        margin-top: 2%;
+    }
+    /* <!-- product END --> */
+
+
     /* <!-- retail-outlet START--> */
     .retail-outlet .container{
         max-width: 600px;
@@ -1080,6 +1237,33 @@ h2 span{
     }
     .retail-outlet .txt{ padding: 1.25rem;}
     /* <!-- retail-outlet END--> */
+
+
+/* ////////////////////////////////// 平版分頁 //////////////////////////////////// */
+
+    /* <!-- main-news START --> */    /* <!-- other-news START --> */
+    .main-news .pic,
+    .main-news .txt,
+    .other-news .pic,
+    .other-news .txt{
+        clear: left;
+        width: 100%;
+    }
+    .main-news .txt,
+    .other-news .txt{
+        margin-left: 0%;
+    }
+    .main-news .news-title{
+        font-size: 1.2rem;
+    }
+    .other-news .pic{
+        display: none;
+    }
+
+    /* <!-- main-news END --> */    /* <!-- other-news END --> */
+
+
+/* ////////////////////////////////// 平版分頁 //////////////////////////////////// */
 
 }
 
@@ -1331,7 +1515,7 @@ h2 span{
 
     /* <!-- news START --> */
     .news .container{
-        max-width: 800px;
+        max-width: 750px;
     } /*
     .news .content::after{
         content: '';
@@ -1371,19 +1555,21 @@ h2 span{
         margin-left: 0;
     } */
 
-    .news .pic{
+    .news-body .pic{
         overflow: hidden;
     }
-    .news .pic img{
+    .news-body .pic img{
         transform: scale(1,1);
         transition: 3s;
     }
-
-    .news h4 a::after{
+    .news-body .news-title{
+        font-size: 1.2rem;
+    }
+    .news-body .news-title::after{
         content: '\f30b';
         font-family: "Font Awesome 5 Pro";
         font-weight: 400;
-        font-size: 1.55rem;
+        font-size: 1.2rem;
         vertical-align: middle;
         position: absolute;
         right: 3%;
@@ -1392,7 +1578,7 @@ h2 span{
     .news .item:hover img{
         transform: scale(1.2,1.2);
     }
-    .news .item:hover h4 a{
+    .news .item:hover .news-title{
         color: #fff;
         background-color: #7B6F5A;
     }
@@ -1401,6 +1587,9 @@ h2 span{
     /* <!-- news END --> */
 
     /* <!-- product START --> */
+    .product .container{
+        max-width: 1200px;
+    }
     .product .item{
         width: 30.333333%;
         margin: 1.5%;
@@ -1448,4 +1637,44 @@ h2 span{
         margin-top: 1%;
     }
     /* <!-- retail-outlet END--> */
+
+
+
+    
+    
+/* ////////////////////////////////// 電腦分頁 //////////////////////////////////// */
+
+    /* <!-- main-news START --> */    /* <!-- other-news START --> */
+    .page-news .container{
+        padding: 0rem 1rem;
+        box-sizing: border-box;
+    }
+    .page-news .container::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .main-news,
+    .other-news{
+        float: left;
+    }
+    .main-news{
+        width: 65%;
+        margin-right: 3%;
+    }
+    .other-news{
+        width: 32%;
+    }
+    .other-news .news-title{
+        font-size: 1rem;
+    }
+    .other-news .item:hover .news-title{
+        color: #fff;
+        background-color: #7B6F5A;
+    }
+ 
+    /* <!-- main-news END --> */    /* <!-- other-news END --> */
+
+/* ////////////////////////////////// 電腦分頁 //////////////////////////////////// */   
+
 } 
