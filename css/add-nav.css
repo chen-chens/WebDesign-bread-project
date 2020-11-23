@@ -1,0 +1,243 @@
+/* .page-header h1{
+  background-color: palevioletred;
+}
+label{
+  background-color: rebeccapurple;
+}
+
+.section{
+  width: 100%;
+  padding: 2.5rem 0rem;
+}
+.container{
+  max-width: 285px;
+  margin: auto;
+  position: relative; 
+}
+.content{
+  padding-top: 1rem;
+}
+h2{
+  color: #7B6F5A;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1.3rem 0rem;
+}
+
+input,button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance:none;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 2.5rem;
+  font-size: .9rem;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none; 
+    margin: 0; 
+}
+input[type="submit"],
+label{
+    cursor: pointer;
+} 
+ */
+
+/* 手機登入分頁 */
+
+/* ========================== 共用 ========================== */
+.membership {
+  background-color: #202020;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;   /* 限制下方顯示 */
+}
+.form-structor .form-body {
+  width: 285px;
+  margin: auto;
+  padding: 1.3rem 0rem;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .3s ease;
+}
+.form-body input {
+  background-color: #fff;
+  padding-left: 1rem;
+  width: 100%;
+  margin-bottom: 1.3rem;
+}
+input::-webkit-input-placeholder {
+  color: #00000066;
+}
+.form-structor .form-title, 
+.form-structor .form-title > span {
+  display: block;
+}
+.form-structor .form-title > span{
+  opacity: 0;
+  visibility: hidden;
+}
+.form-structor .form-title {
+  font-size: 1.7rem;
+  text-align: center;
+}
+.login-area .form-title{ color: #fff; }
+.signup-area .form-title{ color: #7B6F5A; }
+
+
+.membership .ps-memo{
+  font-size: .9rem;
+  line-height: 1.2rem;
+  margin-top: -1rem;
+}
+.membership .ps-memo::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.ps-memo span{
+  float: left;
+  color: #FFD4D4;
+}
+.ps-memo a{
+  float: right;
+  text-decoration: underline;
+  color:#AA4F01;
+}
+.form-structor .submit-btn {
+  display: block;
+  margin-top: 3rem;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.form-structor .signup-area .submit-btn { background-color: #7B1B1B; }
+.form-structor .login-area .submit-btn {  background-color: #008060; }
+
+
+.trigger .form-body{
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease;
+}
+.trigger .form-title {
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  -webkit-transition: all .3s ease;
+}
+.trigger .form-title > span{
+  opacity: 1;
+  visibility: visible;
+  font-size: 1.5rem;
+}
+
+/* ========================== 共用 ========================== */
+
+
+/* 點擊前-登入會員====(順序會影響CSS) */
+.form-structor .login-area {
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  -webkit-transition: all .3s ease;
+  /* outline: 1px solid red; */
+}
+
+/* 點擊前-登入會員====(順序會影響CSS) */
+
+
+/* 點擊後 */
+.login-area.trigger {
+  -webkit-transition: all .3s ease;
+}
+.signup-area{
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  -webkit-transition: all .3s ease;
+  background-color: #EFEEE9;
+}
+.form-structor .signup-area .btm-folder{
+  width: 100%;
+  z-index: 5;
+  -webkit-transition: all .3s ease;
+  /* outline: 1px solid green; */
+}
+/* 點擊後 */
+
+/* 點擊前-註冊會員(add class="trigger")====(順序會影響CSS) */
+.signup-area.trigger{
+  top: 75%;
+  -webkit-transition: all .3s ease;
+}
+.signup-area.trigger .btm-folder{
+  top: 0%;
+  -webkit-transition: all .3s ease;
+}
+
+/* 點擊前-註冊會員(add class="trigger")====(順序會影響CSS)  */
+
+
+/* 不規則圖案 */
+.signup-area::before{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: #EFEEE9;
+    box-shadow: 400px 80px 0px 100px #EFEEE9,
+                300px 80px 0px 100px #EFEEE9,
+                180px 80px 0px 130px #EFEEE9,
+                -80px 30px 0px 45px #EFEEE9,
+                -180px 20px 0px 30px #EFEEE9, 
+                -290px 20px 0px 50px #EFEEE9;
+}
+/* 不規則圖案 */
+
+/*  ///////////////////////////////////////////////////////// 平版 /////////////////////////////////////////////////////////  */
+
+@media screen and (min-width: 481px) {
+  .form-structor .form-body {
+    width: 100%;
+    max-width: 460px;
+  }
+
+}
+
+/*  ///////////////////////////////////////////////////////// 2電腦版 /////////////////////////////////////////////////////////  */
+
+@media screen and (min-width: 769px) {
+  .membership{
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

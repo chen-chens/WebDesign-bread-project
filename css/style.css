@@ -90,11 +90,11 @@ label{
 } */
     /* 不規則圖案 */
 
-    /* 蓋住下拉手機側選單 */
+    
 .page-header h1{
     background-color: #202020;
     position: relative;
-    z-index: 7;
+    z-index: 7; /* 蓋住下拉手機側選單 */
 }
     /* 排版 */
 .page-header .menu-btn,
@@ -211,7 +211,6 @@ h2 span{
     position: absolute;
     top: -70px;
 }
-
     /* 調整錨點位置 END */
 
     /* 購物車數量清單 */
@@ -232,7 +231,7 @@ h2 span{
     top: 0; 
     opacity: 0; 
 } 
-
+/* 
 .sm-user-form{
     background-color: pink;
     height: calc(100vh - 65px);
@@ -244,10 +243,10 @@ h2 span{
 #user-controler:checked  ~ .page-header .sm-user-form{
     top: 65px;
     z-index: 6;
-} 
+}  */
     /* 手機版會員登入 */
 .user-form{
-    /* display: none; */
+    display: none;
 }
 /* <!-- page-header END --> */
 
@@ -256,6 +255,7 @@ h2 span{
 .sm-banner{
     width: 100%;
     padding-top: 70px;
+    position: relative;
 }
 .sm-banner img{
     width: 100%;
@@ -874,8 +874,167 @@ h2 span{
 }
 /* <!-- page-footer END --> */
 
-/* ////////////////////////////////// 手機分頁 //////////////////////////////////// */
+/* ========================== 手機分頁 ========================== */
+/* 手機登入分頁 */
 
+/* ========================== 共用 ========================== */
+.membership {
+    background-color: #202020;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;   /* 限制下方顯示 */
+  }
+  .form-structor .form-body {
+    width: 285px;
+    margin: auto;
+    padding: 1.3rem 0rem;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s ease;
+  }
+  .form-body input {
+    background-color: #fff;
+    padding-left: 1rem;
+    width: 100%;
+    margin-bottom: 1.3rem;
+  }
+  input::-webkit-input-placeholder {
+    color: #00000066;
+  }
+  .form-structor .form-title, 
+  .form-structor .form-title > span {
+    display: block;
+  }
+  .form-structor .form-title > span{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .form-structor .form-title {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .login-area .form-title{ color: #fff; }
+  .signup-area .form-title{ color: #7B6F5A; }
+  
+  
+  .membership .ps-memo{
+    font-size: .9rem;
+    line-height: 1.2rem;
+    margin-top: -1rem;
+  }
+  .membership .ps-memo::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .ps-memo span{
+    float: left;
+    color: #FFD4D4;
+  }
+  .ps-memo a{
+    float: right;
+    text-decoration: underline;
+    color:#AA4F01;
+  }
+  .form-structor .submit-btn {
+    display: block;
+    margin-top: 3rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .form-structor .signup-area .submit-btn { background-color: #7B1B1B; }
+  .form-structor .login-area .submit-btn {  background-color: #008060; }
+  
+  
+  .trigger .form-body{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s ease;
+  }
+  .trigger .form-title {
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    -webkit-transition: all .3s ease;
+  }
+  .trigger .form-title > span{
+    opacity: 1;
+    visibility: visible;
+    font-size: 1.5rem;
+  }
+  
+  /* ========================== 共用 ========================== */
+  
+  
+  /* 點擊前-登入會員====(順序會影響CSS) */
+  .form-structor .login-area {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    -webkit-transition: all .3s ease;
+    /* outline: 1px solid red; */
+  }
+  
+  /* 點擊前-登入會員====(順序會影響CSS) */
+  
+  
+  /* 點擊後 */
+  .login-area.trigger {
+    -webkit-transition: all .3s ease;
+  }
+  .signup-area{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    -webkit-transition: all .3s ease;
+    background-color: #EFEEE9;
+  }
+  .form-structor .signup-area .btm-folder{
+    width: 100%;
+    z-index: 5;
+    -webkit-transition: all .3s ease;
+    /* outline: 1px solid green; */
+  }
+  /* 點擊後 */
+  
+  /* 點擊前-註冊會員(add class="trigger")====(順序會影響CSS) */
+  .signup-area.trigger{
+    top: 75%;
+    -webkit-transition: all .3s ease;
+  }
+  .signup-area.trigger .btm-folder{
+    top: 0%;
+    -webkit-transition: all .3s ease;
+  }
+  
+  /* 點擊前-註冊會員(add class="trigger")====(順序會影響CSS)  */
+  
+  
+  /* 不規則圖案 */
+  .signup-area::before{
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 20%;
+      width: 200px;
+      height: 200px;
+      z-index: -1;
+      border-radius: 50%;
+      background-color: #EFEEE9;
+      box-shadow: 400px 80px 0px 100px #EFEEE9,
+                  300px 80px 0px 100px #EFEEE9,
+                  180px 80px 0px 130px #EFEEE9,
+                  -80px 30px 0px 45px #EFEEE9,
+                  -180px 20px 0px 30px #EFEEE9, 
+                  -290px 20px 0px 50px #EFEEE9;
+  }
+  /* 不規則圖案 */
 /* <!-- main-news START --> */
 
 .page-news{
@@ -1017,9 +1176,9 @@ h2 span{
 /* <!-- other-news END --> */
 
 
-/* ////////////////////////////////// 手機分頁 //////////////////////////////////// */
+/* ========================== 手機分頁 ========================== */
 
-/* =====================================================平版===================================================== */
+/*  ///////////////////////////////////////////////////////// 平版 /////////////////////////////////////////////////////////  */
 
 
 @media screen and (min-width: 481px) {
@@ -1239,8 +1398,12 @@ h2 span{
     /* <!-- retail-outlet END--> */
 
 
-/* ////////////////////////////////// 平版分頁 //////////////////////////////////// */
-
+/* ========================== 平版分頁 ========================== */
+    /* <!-- 手機登入頁 START --> */   
+    .form-structor .form-body {
+        width: 100%;
+        max-width: 460px;
+    }
     /* <!-- main-news START --> */    /* <!-- other-news START --> */
     .main-news .pic,
     .main-news .txt,
@@ -1263,11 +1426,11 @@ h2 span{
     /* <!-- main-news END --> */    /* <!-- other-news END --> */
 
 
-/* ////////////////////////////////// 平版分頁 //////////////////////////////////// */
+/* ========================== 平版分頁 ========================== */
 
 }
 
-/* ==========================電腦版========================== */
+/* ///////////////////////////////////////////////////////// 電腦版 ///////////////////////////////////////////////////////// */
 
 
 @media screen and (min-width: 769px) {
@@ -1460,11 +1623,31 @@ h2 span{
         color: #AA4F01;
     }
 
-    /* <!-- page-header END --> */    
+    /* <!-- page-header END --> */   
+    
+    
+    /* <!-- story START --> */    
+    .section.story{
+        position: absolute;
+        bottom: 0;
+        
+        background-color:transparent;  
+        padding: 0;
+    }
+    .story .container{
+        max-width: 1200px;
+        background-color: #EFEEE9;
+        padding: 2.5rem 0rem;
+    }
+    .story .content{
+        padding: 1rem 1.3rem 0rem;
+    }
+    /* <!-- story END --> */    
+
 
     /* <!-- intro START --> */
-
     /* 排版 */
+
     .intro .item{
         max-width: 800px;
         margin: auto;
@@ -1642,8 +1825,11 @@ h2 span{
 
     
     
-/* ////////////////////////////////// 電腦分頁 //////////////////////////////////// */
-
+/* ========================== 電腦分頁 ========================== */
+   /* 手機分頁 */
+    .membership{
+        display: none;
+    }
     /* <!-- main-news START --> */    /* <!-- other-news START --> */
     .page-news .container{
         padding: 0rem 1rem;
@@ -1675,6 +1861,6 @@ h2 span{
  
     /* <!-- main-news END --> */    /* <!-- other-news END --> */
 
-/* ////////////////////////////////// 電腦分頁 //////////////////////////////////// */   
+/* ========================== 電腦分頁 ========================== */   
 
 } 

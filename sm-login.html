@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="css/add-nav.css"> -->
+</head>
+<body>
+<!-- ////////////////////////主導覽 開始//////////////////////// -->
+    <!-- page-header START -->
+    <input type="checkbox" name="" id="menu-controler">
+    <input type="checkbox" name="" id="cart-controler">
+    <input type="checkbox" name="" id="user-controler">
+
+
+
+    <header class="page-header">
+        <div class="container">
+            <h1>
+                <a href="index.html" class="logo">
+                    <span>麥面包</span>
+                    <img src="img/phone/logo.png" alt="麥面包LOGO">
+                </a>    
+            </h1>
+            <label for="menu-controler" class="menu-btn">
+                <span>選單</span>
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </label>
+            <label for="cart-controler" class="cart-btn">
+                <span>購物</span>
+                <i class="fas fa-shopping-cart">
+                    <span class="cart-num">2</span>
+                </i>
+            </label>
+
+            <nav class="main-nav" id="menu-toggle">
+                <ul class="menu">
+                    <li>                    
+                        <label for="user-controler" class="user-btn">
+                            登入會員
+                            <!-- <i class="fas fa-caret-down"></i> -->
+                        </label>
+                    </li>
+                    <li><a href="#to-story">品牌故事</a></li>
+                    <li><a href="#to-intro">麵包製成</a></li>
+                    <li><a href="#to-news">最新消息</a></li>
+                    <li><a href="#to-product">主打商品</a></li>
+                    <li><a href="#to-media">影音媒體</a></li>
+                    <li><a href="#to-retail-outlet">門市據點</a></li>  
+                </ul>
+                <ul class="social-link">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-line"></i>
+                        </a>
+                    </li>
+                </ul> 
+                <label for="user-controler" class="user-btn">
+                    <span>登入</span>
+                    <i class="fas fa-user"></i>
+                </label>
+                <label for="cart-controler" class="cart-btn">
+                    <span>購物</span>
+                    <i class="fas fa-shopping-cart">
+                        <span class="cart-num">2</span>
+                    </i>
+                </label>
+            </nav>
+        </div>
+    </header>
+    <!-- page-header END -->
+
+
+
+<!-- ////////////////////////手機登入 開始//////////////////////// -->
+
+<section class="membership">   
+    <div class="form-structor">
+        <div class="login-area" id="show-login">
+            <label class="form-title" id="login">
+                <span><i class="fas fa-caret-down"></i></span>
+                登入會員
+                <div class="form-body">
+                    <input type="email" placeholder="請輸入Email" required="required">
+                    <input type="password" placeholder="請輸入6-15碼英數混合密碼" required="required">
+                    <div class="ps-memo">
+                        <span>英文字母需區分大小寫</span>
+                        <a href="#">忘記密碼?</a>
+                    </div>
+                    <!-- <label>
+                        <input type="checkbox" name="記住我的帳號">
+                        記住我的帳號
+                    </label> -->
+                    <button class="submit-btn">登入會員</button>
+                </div>
+            </label>
+        </div>
+
+        <div class="signup-area trigger" id="show-signup">
+            <div class="btm-folder">
+                <label class="form-title" id="signup">
+                    <span><i class="fas fa-caret-up"></i></span>
+                    註冊會員
+                    <div class="form-body">
+                        <input type="tel" placeholder="請輸入手機號碼" required="required">
+                        <input type="email" placeholder="請輸入Email" required="required">
+                        <input type="password" placeholder="請輸入6-15碼英數混合密碼" required="required">
+                        <button class="submit-btn">註冊會員</button>
+                    </div>
+                </label>
+            </div>    
+        </div>
+    </div>
+</section> 
+
+<!-- ////////////////////////手機登入 結束//////////////////////// -->
+
+
+<!-- pc-log-in START -->
+<section class="section user-form">
+    <div class="container">
+        <div class="topic">
+            <h2>
+                <img src="img/phone/logo.png" alt="麥面包LOGO">
+            </h2>
+        </div>
+        <div class="content">
+            <div class="item">
+                <h2>登入會員</h2>
+                <form class="log-in">
+                    <input type="tel" placeholder="請輸入手機號碼" required="required">
+                    <input type="password" placeholder="請輸入6-15碼英數混合密碼" required="required">
+                    <div class="ps-memo">
+                        <span>英文字母需區分大小寫</span>
+                        <a href="#">忘記密碼?</a>
+                    </div>
+                    <input type="checkbox" name="記住我的帳號" id="">
+                    <input type="submit" value="登入會員">
+                </form>
+            </div>
+            <div class="item">
+                <h2>註冊會員</h2>
+                <form class="sign-up">
+                    <input type="tel" placeholder="請輸入手機號碼" required="required">
+                    <input type="password" placeholder="請輸入6-15碼英數混合密碼" required="required">
+                    <div class="ps-memo">
+                        <span>英文字母需區分大小寫</span>
+                    </div>
+                    <input type="password" placeholder="請再次確認密碼" required="required">
+                    <input type="submit" value="註冊會員">
+                </form>
+            </div>
+        </div> 
+        <label for="user-controler" class="close-btn">
+            <span>登入會員關閉</span>
+            <i class="fas fa-times"></i>
+        </label>
+    </div>
+</section> 
+<!-- pc-log-in END -->
+
+
+    <script>
+
+        // 取得常數:(1)點擊元素 (2)作用內容 
+        const loginBtn = document.getElementById('login');
+        const signupBtn = document.getElementById('signup');
+        const loginBox = document.getElementById('show-login');
+        const signupBox = document.getElementById('show-signup');
+
+
+        // 當點擊註冊會員:註冊會員-class 且 登入會員+class
+        signupBtn.addEventListener('click',function(){
+            if(signupBox.classList.contains('trigger')) { 
+               signupBox.classList.remove('trigger');
+               loginBox.classList.add('trigger');
+            } 
+        });
+
+        // 當點擊登入會員:登入會員-class 且 註冊會員+class
+        loginBtn.addEventListener('click',function(){
+            if(loginBox.classList.contains('trigger')) { 
+               loginBox.classList.remove('trigger'); 
+               signupBox.classList.add('trigger');
+            } 
+        });
+        
+    </script>
+</body>
+</html>
