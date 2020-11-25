@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>麥面包</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
@@ -176,31 +176,7 @@
 <!-- pc-log-in END -->
 
 
-    <script>
+<script src="js/script.js"></script>
 
-        // 取得常數:(1)點擊元素 (2)作用內容 
-        const loginBtn = document.getElementById('login');
-        const signupBtn = document.getElementById('signup');
-        const loginBox = document.getElementById('show-login');
-        const signupBox = document.getElementById('show-signup');
-
-
-        // 當點擊註冊會員:註冊會員-class 且 登入會員+class
-        signupBtn.addEventListener('click',function(){
-            if(signupBox.classList.contains('trigger')) { 
-               signupBox.classList.remove('trigger');
-               loginBox.classList.add('trigger');
-            } 
-        });
-
-        // 當點擊登入會員:登入會員-class 且 註冊會員+class
-        loginBtn.addEventListener('click',function(){
-            if(loginBox.classList.contains('trigger')) { 
-               loginBox.classList.remove('trigger'); 
-               signupBox.classList.add('trigger');
-            } 
-        });
-        
-    </script>
 </body>
 </html>

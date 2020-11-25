@@ -21,6 +21,10 @@ body{
     margin: auto;
     position: relative; 
 }
+    /* 解決導覽列fixed蓋住問題 */
+.clear-fixed{
+    padding-top: 70px;
+}
 .content{
     padding-top: 1rem;
 }
@@ -55,6 +59,20 @@ input[type="submit"],
 label{
     cursor: pointer;
 } 
+.info{
+    padding: 1rem 0rem;
+    margin-bottom: 5rem;
+    text-indent: 2.2rem;
+    text-align: justify;
+    line-height: 1.3rem;
+    color: #545454;
+}
+.info strong{
+    display: block;
+    padding: 1rem 0rem;
+    text-indent: 0rem;
+    font-weight: 500;
+}
 
 /* <!-- page-header START --> */
 .page-header{
@@ -252,9 +270,9 @@ h2 span{
 
 
 /* <!-- sm-banner START --> */
+
 .sm-banner{
     width: 100%;
-    padding-top: 70px;
     position: relative;
 }
 .sm-banner img{
@@ -529,7 +547,7 @@ h2 span{
 .news-body a{
     display: block;
 }
-.news-body .news-title{
+.news-body .title{
     background-color: rgb(218, 212, 202,.6);
     border-bottom:2px solid #fff ;
     box-sizing: border-box;
@@ -539,7 +557,7 @@ h2 span{
     transition: all .5s;
     position: relative;
 }
-.news-body .news-title::after{
+.news-body .title::after{
     content: '\f30b';
     font-family: "Font Awesome 5 Pro";
     font-weight: 400;
@@ -616,58 +634,60 @@ h2 span{
     border: 2px solid #7B6F5A;
     padding: 1rem;
     color: #7B6F5A;
-    position: relative;
 }
 .product .item + .item{
     margin-top: 2rem;
 }
+.product-body{
+    position: relative;
+}
 .product a{
     display: block;
 }
-.product .pic{
+.product-body .pic{
     width: 70%;
     margin: 1.3rem auto;
     border-radius: 50%;
     overflow: hidden;
 }
-.product .pic img{
+.product-body .pic img{
     width: 100%;
     vertical-align: middle;
 }
-.product h3,
-.product ins,
-.product del{
+.product-body h3,
+.product-body ins,
+.product-body del{
     font-size: 1.3rem;
-    font-weight: bold;
     line-height: 1.5rem;
 }
-.product del,
-.product ins{
+.product-body del,
+.product-body ins{
     display: inline-block;
     padding: 1.5rem .5rem;
+    font-weight: bold;
 }
-.product h3{ padding: 1.5rem 0rem; }
-.product ins{ color: #7B1B1B; }
-.product del{ text-decoration: line-through; }
+.product-body h3{ padding: 1.5rem 0rem; font-weight: 500;}
+.product-body ins{ color: #7B1B1B; }
+.product-body del{ text-decoration: line-through; }
 
-.product .summary{
+.product-body .summary{
     font-weight: 400;
     line-height: 1.3rem;
     text-align: justify;
 }
-.product .cart-box::after{
+.product-body .cart-box::after{
     content: '';
     display: block;
     clear: both;
 }
-.product .add-cart{
+.product-body .add-cart{
     width: 48%;
     font-size: 0;
     letter-spacing: 0;
     float: left;
 }
-.product button,
-.product input[type="number"]{
+.product-body button,
+.product-body input[type="number"]{
     width: 33.333333%;
     border: 1px solid #7B6F5A;
     background-color: transparent;
@@ -676,40 +696,52 @@ h2 span{
     vertical-align: middle;
     text-align: center;
 }
-.product button:first-child{ border-right: 0px ; }
-.product button:last-child{ border-left: 0px ; }
+.product-body button{
+    background-color: #D9D2C8; 
+}
+.product-body button:hover{
+    background-color: #AA4F01; 
+}
+.product-body button:hover .fas{
+    color: #fff; 
+}
+.product-body button:first-child{ border-right: 0px ; }
+.product-body button:last-child{ border-left: 0px ; }
 
-.product input[type="number"],
-.product .fas{
+.product-body input[type="number"],
+.product-body .fas{
     color: #7B6F5A ;
 }
-.product input[type="number"]{ font: 1.2rem 'Noto Sans TC'; }
-.product .fas{
+.product-body input[type="number"]{ font: 1.2rem 'Noto Sans TC'; }
+.product-body .fas{
     width: 100%; 
-    line-height: 40px; 
+    line-height: 39px;
 }
 
-.product input[type="submit"]{
+.product-body input[type="submit"]{
     width: 48%;
     background-color: #7B6F5A;
     color: #fff;
     float: right;
 }
+.product-body input[type="submit"]:hover{
+    background-color: #AA4F01;  
+}
 
-.product .detail{
+.product-body .detail{
     width: 100%;
+    margin-top: 1rem;
     border: 1px solid #7B6F5A;
     box-sizing: border-box;
     line-height: 2.5rem;
     color: #7B6F5A;
-    margin-top: 1rem;
 }
-.product .detail:hover{
+.product-body .detail:hover{
     background-color: #7B6F5A;
     color: #fff;
 }
 
-.product .tag{
+.product-body .tag{
     position: absolute;
     top: 0;
     right: 0;
@@ -877,7 +909,7 @@ h2 span{
 /* ========================== 手機分頁 ========================== */
 /* 手機登入分頁 */
 
-/* ========================== 共用 ========================== */
+/* == 共用 ==*/
 .membership {
     background-color: #202020;
     height: 100vh;
@@ -966,7 +998,7 @@ h2 span{
     font-size: 1.5rem;
   }
   
-  /* ========================== 共用 ========================== */
+  /* == 共用 == */
   
   
   /* 點擊前-登入會員====(順序會影響CSS) */
@@ -1037,30 +1069,27 @@ h2 span{
   /* 不規則圖案 */
 /* <!-- main-news START --> */
 
-.page-news{
-    padding-top: 4.375rem;
-}
-.news-track ol{
+.breadcrumbs ol{
     word-spacing: -5px;
     padding: 1rem 0rem;
 }
-.news-track li{
+.breadcrumbs li{
     display: inline-block;
 }
-.news-track li:last-child a,
-.news-track li:hover a{
+.breadcrumbs li:last-child a,
+.breadcrumbs li:hover a{
     color: #AA4F01;
 }
-.news-track li:last-child a{
+.breadcrumbs li:last-child a{
     font-weight: 500;
 }
-.news-track a{
+.breadcrumbs a{
     display: inline-block;
     font-size: .85rem;
     color: #545454;
     line-height: 1.2rem;
 }
-.news-track li:not(:first-child)::before{
+.breadcrumbs li:not(:first-child)::before{
     content: "/";
     color: #545454;
     font-size: .9rem;
@@ -1075,10 +1104,10 @@ h2 span{
     width: 100%;
     vertical-align: middle;
 }
-.main-news .news-title::after{
+.main-news .title::after{
     display: none;
 }
-.main-news .news-title{
+.main-news .title{
     padding: 1rem 0rem;
     border: none;
 }
@@ -1086,28 +1115,15 @@ h2 span{
     display: block;
     margin-bottom: 1rem;
 }
-.news-article{
-    padding: 1rem 0rem;
-    margin-bottom: 5rem;
-    text-indent: 2.2rem;
-    text-align: justify;
-    line-height: 1.3rem;
-    color: #545454;
-}
-.news-article strong{
-    display: block;
-    padding: 1rem 0rem;
-    text-indent: 0rem;
-    font-weight: 500;
-}
-.news-article span:first-child{
+
+.main-news .info span:first-child{
     margin-top: .5rem;
 }
-.news-article span{
+.main-news .info span{
     display: block;
     line-height: 1.5rem;
 }
-.news-article span::before{
+.main-news .info span::before{
     content: '\f0f3';
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
@@ -1150,11 +1166,11 @@ h2 span{
     font-size: 1.1rem;
     margin-top: 2rem;
 }
-.other-news .news-title{
+.other-news .title{
     font-size: .9rem;
     padding: 1rem 0rem 1rem .5rem;
 }
-.other-news .news-title::after{
+.other-news .title::after{
     content: '\f30b';
     font-family: "Font Awesome 5 Pro";
     font-weight: 400;
@@ -1307,12 +1323,12 @@ h2 span{
         width: 100%;
         vertical-align: middle;
     }
-    .news-body .news-title{
+    .news-body .title{
         font-size: 1rem;
         padding: 1rem 0rem 1rem .5rem;
         border-bottom:none ;
     }
-    .news-body .news-title::after{
+    .news-body .title::after{
         content: '\f30b';
         font-family: "Font Awesome 5 Pro";
         font-weight: 400;
@@ -1416,7 +1432,7 @@ h2 span{
     .other-news .txt{
         margin-left: 0%;
     }
-    .main-news .news-title{
+    .main-news .title{
         font-size: 1.2rem;
     }
     .other-news .pic{
@@ -1745,10 +1761,10 @@ h2 span{
         transform: scale(1,1);
         transition: 3s;
     }
-    .news-body .news-title{
+    .news-body .title{
         font-size: 1.2rem;
     }
-    .news-body .news-title::after{
+    .news-body .title::after{
         content: '\f30b';
         font-family: "Font Awesome 5 Pro";
         font-weight: 400;
@@ -1761,7 +1777,7 @@ h2 span{
     .news .item:hover img{
         transform: scale(1.2,1.2);
     }
-    .news .item:hover .news-title{
+    .news .item:hover .title{
         color: #fff;
         background-color: #7B6F5A;
     }
@@ -1826,7 +1842,7 @@ h2 span{
     
     
 /* ========================== 電腦分頁 ========================== */
-   /* 手機分頁 */
+   /* 手機登入頁 */
     .membership{
         display: none;
     }
@@ -1851,10 +1867,10 @@ h2 span{
     .other-news{
         width: 32%;
     }
-    .other-news .news-title{
+    .other-news .title{
         font-size: 1rem;
     }
-    .other-news .item:hover .news-title{
+    .other-news .item:hover .title{
         color: #fff;
         background-color: #7B6F5A;
     }
