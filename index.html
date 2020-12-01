@@ -40,12 +40,7 @@
 
                 <nav class="main-nav" id="menu-toggle">
                     <ul class="menu">
-                        <li>                    
-                            <!-- <label for="user-controler" class="user-btn"> -->
-                                <a href="sm-login.html">登入會員</a>
-                                <!-- <i class="fas fa-caret-down"></i> -->
-                            <!-- </label> -->
-                        </li>
+                        <li><a href="page/sm-login.html">登入會員</a></li>
                         <li><a href="#to-story">品牌故事</a></li>
                         <li><a href="#to-intro">麵包製成</a></li>
                         <li><a href="#to-news">最新消息</a></li>
@@ -81,17 +76,74 @@
                         </i>
                     </label>
                 </nav>
+
+                <!-- wish-list START -->
+                <section class="wish-list">
+                    <div class="container">
+                        <div class="topic">
+                            <h2>購物車清單</h2>
+                        </div>
+                        <ul class="content">
+                            <li class="product-body item">
+                                <div class="pic">
+                                    <a href="page/product5.html" target="_blank">
+                                        <img src="img/phone/product5a.png" alt="酒釀桂圓">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3>酒釀桂圓</h3>
+                                    <button class="delete">移除</button>
+                                </div>
+                                <div class="cart-box">
+                                    <div class="add-cart">
+                                        <button>
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" value="1">
+                                        <button>
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="submit" value="加入購物車">
+                                </div>
+                            </li>
+                            <li class="product-body item">
+                                <div class="pic">
+                                    <a href="page/product6.html" target="_blank">
+                                        <img src="img/phone/product6a.png" alt="雜糧吐司">
+                                    </a>
+                                </div>
+                                <div class="txt">
+                                    <h3>雜糧吐司</h3>
+                                    <button class="delete">移除</button>
+                                </div>
+                                <div class="cart-box">
+                                    <div class="add-cart">
+                                        <button>
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <input type="number" value="1">
+                                        <button>
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="submit" value="加入購物車">
+                                </div>
+                            </li>
+                            <a href="#" target="_blank" class="pay">前往結帳</a>
+                        </ul>
+                    </div>
+                </section> 
+                <!-- wish-list END -->   
             </div>
         </header>
         <!-- page-header END -->
 
-        <!-- pc-log-in START -->
-        <section class="section user-form">
+        <!-- pc-login START -->
+        <section class="section pc-login">
             <div class="container">
                 <div class="topic">
-                    <h2>
-                        <img src="img/phone/logo.png" alt="麥面包LOGO">
-                    </h2>
+                    <h2>麥面包登入</h2>
                 </div>
                 <div class="content">
                     <div class="item">
@@ -126,14 +178,15 @@
                 </label>
             </div>
         </section> 
-        <!-- pc-log-in END -->
+        <!-- pc-login END -->
     <!-- ////////////////////////主導覽 結束//////////////////////// --> 
 
 
     <!-- ////////////////////////大圖 開始//////////////////////// -->
-        <!-- sm-banner START -->
-        <section class="clear-fixed sm-banner">
-            <img src="img/phone/banner.jpg" alt="形象大圖">
+        <!-- banner START -->
+        <section class="section-fixed banner">
+            <img src="img/phone/banner.jpg" alt="形象大圖" class="sm-banner">
+            <img src="img/pc/banner.jpg" alt="形象大圖" class="pc-banner">
             <!-- ////////////////////////品牌故事 開始//////////////////////// -->
             <!-- story START -->
             <section class="section story">
@@ -165,14 +218,8 @@
             <!-- story END -->
             <!-- ////////////////////////品牌故事 結束//////////////////////// -->
         </section>
-        <!-- sm-banner END -->
+        <!-- banner END -->
 
-        <!-- pc-banner START -->
-        <!-- <section class="pc-banner">
-            <img src="img/phone/banner.jpg" alt="形象大圖">
-        </section> -->
-        <!-- pc-banner END -->
-    <!-- ////////////////////////大圖 結束//////////////////////// -->
 
 
     
@@ -332,13 +379,13 @@
                 <div class="content">
                     <div class="news-body item">
                         <div class="pic">
-                            <a href="#">
-                                <img src="img/laptop/news1.jpg" alt="雙十連假營業時間調整">
+                            <a href="page/news1.html" target="_blank">
+                                <img src="img/pc/news1.jpg" alt="雙十連假營業時間調整">
                             </a>
                         </div>
                         <div class="txt"> 
                             <h4>  
-                                <a href="#" class="title">
+                                <a href="page/news1.html" target="_blank" class="title">
                                     <time>2020.10.02</time>
                                     雙十連假營業時間調整
                                 </a>
@@ -350,13 +397,13 @@
                     </div>
                     <div class="news-body item">
                         <div class="pic">
-                            <a href="#">
-                                <img src="img/laptop/news2.jpg" alt="麥麵包移動餐車開跑!!!">
+                            <a href="page/news2.html" target="_blank">
+                                <img src="img/pc/news2.jpg" alt="麥麵包移動餐車開跑!!!">
                             </a>
                         </div>
                         <div class="txt"> 
                             <h4>  
-                                <a href="#" class="title">
+                                <a href="page/news2.html" target="_blank" class="title">
                                     <time>2020.07.26</time>
                                     麥麵包移動餐車開跑!!!
                                 </a>
@@ -368,13 +415,13 @@
                     </div>
                     <div class="news-body item">
                         <div class="pic">
-                            <a href="#">
-                                <img src="img/laptop/news3.jpg" alt="秋季最新產品亮相囉!!!">
+                            <a href="page/news3.html" target="_blank">
+                                <img src="img/pc/news3.jpg" alt="秋季最新產品亮相囉!!!">
                             </a>
                         </div>
                         <div class="txt"> 
                             <h4>  
-                                <a href="#" class="title">
+                                <a href="page/news3.html" target="_blank" class="title">
                                     <time>2020.10.13</time>
                                     秋季最新產品亮相囉!!!
                                 </a>
@@ -385,9 +432,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="txt-more">
+                <!-- <div class="txt-more">
                     <a href="#">更多消息</a>
-                </div>  
+                </div>   -->
             </div>
         </section>
 
@@ -425,7 +472,7 @@
                 <div class="content">
                     <div class="product-body item">
                         <div class="pic">
-                            <a href="#">
+                            <a href="page/product1.html" alt="_blank">
                                 <img src="img/phone/product1a.png" alt="歐式核桃">
                             </a>
                         </div>
@@ -440,25 +487,21 @@
                         <div class="cart-box">
                             <div class="add-cart">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-minus"></i>
-                                    </a>
+                                    <i class="fas fa-minus"></i>
                                 </button>
                                 <input type="number" value="1">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
                             <input type="submit" value="加入購物車">
                         </div>
-                        <a href="#" target="_blank" class="detail">詳細資訊</a>
-                        <span class="tag">限時優惠</span>
+                        <a href="page/product1.html" alt="_blank" class="detail">詳細資訊</a>
+                        <!-- <span class="tag">限時優惠</span> -->
                     </div>
                     <div class="product-body item">
                         <div class="pic">
-                            <a href="#">
+                            <a href="page/product2.html" alt="_blank">
                                 <img src="img/phone/product2a.png" alt="起士核桃">
                             </a>
                         </div>
@@ -473,25 +516,21 @@
                         <div class="cart-box">
                             <div class="add-cart">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-minus"></i>
-                                    </a>
+                                    <i class="fas fa-minus"></i>
                                 </button>
                                 <input type="number" value="1">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
                             <input type="submit" value="加入購物車">
                         </div>
-                        <a href="#" target="_blank" class="detail">詳細資訊</a>
+                        <a href="page/product2.html" alt="_blank" class="detail">詳細資訊</a>
                         <span class="tag">限時優惠</span>
                     </div>
                     <div class="product-body item">
                         <div class="pic">
-                            <a href="#">
+                            <a href="page/product3.html" alt="_blank">
                                 <img src="img/phone/product3a.png" alt="蔓越莓核桃">
                             </a>
                         </div>
@@ -506,25 +545,21 @@
                         <div class="cart-box">
                             <div class="add-cart">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-minus"></i>
-                                    </a>
+                                    <i class="fas fa-minus"></i>
                                 </button>
                                 <input type="number" value="1">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
                             <input type="submit" value="加入購物車">
                         </div>
-                        <a href="#" target="_blank" class="detail">詳細資訊</a>
-                        <span class="tag">限時優惠</span>
+                        <a href="page/product3.html" alt="_blank" class="detail">詳細資訊</a>
+                        <!-- <span class="tag">限時優惠</span> -->
                     </div>
                     <div class="product-body item">
                         <div class="pic">
-                            <a href="#">
+                            <a href="page/product4.html" alt="_blank">
                                 <img src="img/phone/product4a.png" alt="鄉村黑麥麵包">
                             </a>
                         </div>
@@ -539,25 +574,21 @@
                         <div class="cart-box">
                             <div class="add-cart">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-minus"></i>
-                                    </a>
+                                    <i class="fas fa-minus"></i>
                                 </button>
                                 <input type="number" value="1">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
                             <input type="submit" value="加入購物車">
                         </div>
-                        <a href="#" target="_blank" class="detail">詳細資訊</a>
+                        <a href="page/product4.html" alt="_blank" class="detail">詳細資訊</a>
                         <span class="tag">限時優惠</span>
                     </div>
                     <div class="product-body item">
                         <div class="pic">
-                            <a href="#">
+                            <a href="page/product5.html" alt="_blank">
                                 <img src="img/phone/product5a.png" alt="酒釀桂圓">
                             </a>
                         </div>
@@ -572,25 +603,21 @@
                         <div class="cart-box">
                             <div class="add-cart">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-minus"></i>
-                                    </a>
+                                    <i class="fas fa-minus"></i>
                                 </button>
                                 <input type="number" value="1">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
                             <input type="submit" value="加入購物車">
                         </div>
-                        <a href="#" target="_blank" class="detail">詳細資訊</a>
-                        <span class="tag">限時優惠</span>
+                        <a href="page/product5.html" alt="_blank" class="detail">詳細資訊</a>
+                        <span class="tag sub">季節限定</span>
                     </div>
                     <div class="product-body item">
                         <div class="pic">
-                            <a href="#">
+                            <a href="page/product6.html" alt="_blank">
                                 <img src="img/phone/product6a.png" alt="雜糧吐司">
                             </a>
                         </div>
@@ -605,21 +632,17 @@
                         <div class="cart-box">
                             <div class="add-cart">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-minus"></i>
-                                    </a>
+                                    <i class="fas fa-minus"></i>
                                 </button>
                                 <input type="number" value="1">
                                 <button>
-                                    <a href="#">
-                                        <i class="fas fa-plus"></i>
-                                    </a>
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
                             <input type="submit" value="加入購物車">
                         </div>
-                        <a href="#" target="_blank" class="detail">詳細資訊</a>
-                        <span class="tag">限時優惠</span>
+                        <a href="page/product6.html" alt="_blank" class="detail">詳細資訊</a>
+                        <!-- <span class="tag">限時優惠</span> -->
                     </div>
                 </div>
             </div>
@@ -638,8 +661,8 @@
                 <div class="content">
                     <div class="item video">
                         <div class="pic">
-                            <a href="#">
-                                <img src="https://picsum.photos/375/300?random=1">
+                            <a href="#youtube1">
+                                <img src="img/phone/media1.png" alt="麥面包一窺一粒麥的源頭。">
                             </a>
                         </div>
                         <div class="txt">
@@ -649,38 +672,42 @@
                     </div>
                     <div class="item sns">
                         <div class="pic">
-                            <a href="#">
-                                <img src="https://picsum.photos/188/150?random=2">
+                            <a href="#youtube2">
+                                <img src="img/phone/media2.png" alt="感謝好生活雜誌報導《誠意好麵包》">
                             </a>
                         </div>
                         <div class="txt">
+                            <i class="fas fa-play-circle"></i>
                             <p>感謝好生活雜誌報導《誠意好麵包》</p>
                         </div>
                     </div>
                     <div class="item sns">
                         <div class="pic">
-                            <a href="#">
-                                <img src="https://picsum.photos/188/150?random=3">
+                            <a href="#youtube3">
+                                <img src="img/phone/media3.png" alt="《麥面包小知識》白麵包與全麥麵包差在哪?">
                             </a>
                         </div>
                         <div class="txt">
-                            <p>麥面包的合作夥伴Andrés，產出與大自然共生的乳源。</p>
+                            <i class="fas fa-play-circle"></i>
+                            <p>《麥面包小知識》白麵包與全麥麵包差在哪?</p>
                         </div>
                     </div>
                     <div class="item sns">
                         <div class="pic">
-                            <a href="#">
-                                <img src="https://picsum.photos/375/150?random=3">
+                            <a href="#youtube4">
+                                <img src="img/phone/media4.png" alt="採用來自法國Brie，質軟味鹹，奶香濃郁。">
                             </a>
                         </div>
                         <div class="txt">
+                            <i class="fas fa-play-circle"></i>
                             <p>採用來自法國Brie，質軟味鹹，奶香濃郁。</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
+    
+
         <!-- media END -->
     <!-- ////////////////////////影音媒體 結束//////////////////////// -->
 
@@ -757,7 +784,7 @@
         <footer class="section page-footer">
             <div class="container">
                 <div class="logo">
-                    <a href="#">
+                    <a href="index.html">
                         <img src="img/phone/logo.png" alt="麥面包LOGO">
                     </a>
                 </div>

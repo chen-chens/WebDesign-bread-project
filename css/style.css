@@ -9,21 +9,19 @@ body{
     letter-spacing: .1rem;
 }
 
-
-/* 手機板 全域 */
-
 .section{
     width: 100%;
     padding: 2.5rem 0rem;
+}
+/* 解決導覽列fixed蓋住問題 */
+.section-fixed{
+    width: 100%;
+    padding: 4.375rem 0rem 2.5rem;
 }
 .container{
     max-width: 285px;
     margin: auto;
     position: relative; 
-}
-    /* 解決導覽列fixed蓋住問題 */
-.clear-fixed{
-    padding-top: 70px;
 }
 .content{
     padding-top: 1rem;
@@ -56,9 +54,10 @@ input::-webkit-inner-spin-button {
     margin: 0; 
 }
 input[type="submit"],
-label{
+button,label{
     cursor: pointer;
 } 
+
 .info{
     padding: 1rem 0rem;
     margin-bottom: 5rem;
@@ -218,7 +217,6 @@ label{
     line-height: 4rem;
     color: #fff;
 }
-
     /* main-nav END*/
 
     /* 調整錨點位置 START */
@@ -230,6 +228,105 @@ h2 span{
     top: -70px;
 }
     /* 調整錨點位置 END */
+
+    /* <!-- wish-list START --> */
+#cart-controler:checked ~ .page-header .wish-list{
+    right: 0%;
+}
+
+.wish-list::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom:10px solid #EFEEE9;
+    position: absolute;
+    right: 25px;
+    top: -10px;
+    z-index: 9;
+}
+
+.wish-list{
+    width: 100%;
+    max-width: 320px;
+    height: calc(100vh - 70px);
+    background-color: #EFEEE9;
+    position: absolute;
+    top: 70px;
+    right: -300%;
+    transition: .5s;
+    box-shadow: 0px 0px 5px #a5a5a5,
+                0px 0px 0px 500px #000000a0;
+}
+.wish-list .container{
+    max-width: 100%;
+}
+.wish-list .item{
+    background-color: #cfcfcf4e;
+    padding: 1rem;
+    margin-bottom: 1.3rem;
+    box-sizing: border-box;
+}
+.wish-list .item::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.wish-list .product-body .pic{
+    width: 135px;
+    height: 135px;
+    margin: 0;
+    border-radius: 0%;
+}
+
+.wish-list .product-body .pic{
+    float: left;
+}
+.wish-list .txt,
+.wish-list .product-body .add-cart,
+.wish-list .cart-box input[type="submit"]{
+    float: right;
+}
+.wish-list .txt .delete{
+    background-color: #3f3f3fdb;
+    color: #fff;
+    padding: 0 1rem;
+    margin:0 0 .5rem .2rem;
+}
+.wish-list .txt .delete:hover{
+    background-color: #3f3f3f;
+}
+.wish-list .add-cart{
+    margin-bottom: .5rem;
+}
+
+.wish-list .product-body h3{
+    display: inline-block;
+    font-size: 1rem;
+    color: #7B6F5A;
+    padding: 0;
+}
+.wish-list .fas{
+    padding: 0;
+    font-size: .9rem;
+    font-weight: 900;
+}
+.wish-list .pay{
+    width: 90%;
+    margin: 1rem auto 0;
+    background-color: #7B1B1B;
+    border: 1px solid #7B1B1B;
+    box-sizing: border-box;
+    line-height: 2.5rem;
+    color: #fff;
+    text-align: center;
+}
+.wish-list .pay:hover{
+    background-color: #AA4F01;
+}
+    /* <!-- wish-list END --> */    
 
     /* 購物車數量清單 */
 #cart-controler,
@@ -248,38 +345,30 @@ h2 span{
     position: fixed;
     top: 0; 
     opacity: 0; 
-} 
-/* 
-.sm-user-form{
-    background-color: pink;
-    height: calc(100vh - 65px);
-    text-align: center;
-    position: absolute;
-    top: -100vh;
-    transition: .5s;
 }
-#user-controler:checked  ~ .page-header .sm-user-form{
-    top: 65px;
-    z-index: 6;
-}  */
-    /* 手機版會員登入 */
-.user-form{
+
+.pc-login{
     display: none;
 }
+    /* 手機版會員登入 */
 /* <!-- page-header END --> */
 
 
-/* <!-- sm-banner START --> */
-
-.sm-banner{
+/* <!-- banner START --> */
+.section-fixed.banner{
     width: 100%;
+    padding-bottom: 0;
     position: relative;
 }
-.sm-banner img{
+
+.banner img{
     width: 100%;
     vertical-align: middle;
 }
-/* <!-- sm-banner END --> */
+.pc-banner{
+    display: none;
+}
+/* <!-- banner END --> */
 
 
 /* <!-- story START --> */
@@ -509,6 +598,7 @@ h2 span{
 }
 /* <!-- faith END --> */
 
+
 /* <!-- principle START --> */
 .principle{
     background-color: #EFEEE9;
@@ -596,6 +686,7 @@ h2 span{
 }
 /* <!-- news END --> */
 
+
 /* <!-- subscribe START --> */
 .subscribe{
     background-color: #4E473B;
@@ -620,8 +711,8 @@ h2 span{
     background-color: #008060;
     color: #fff;
 }
-
 /* <!-- subscribe END --> */
+
 
 /* <!-- product START --> */
 .product{
@@ -686,8 +777,8 @@ h2 span{
     letter-spacing: 0;
     float: left;
 }
-.product-body button,
-.product-body input[type="number"]{
+.add-cart button,
+.add-cart input[type="number"]{
     width: 33.333333%;
     border: 1px solid #7B6F5A;
     background-color: transparent;
@@ -696,35 +787,35 @@ h2 span{
     vertical-align: middle;
     text-align: center;
 }
-.product-body button{
+.add-cart button{
     background-color: #D9D2C8; 
 }
-.product-body button:hover{
+.add-cart button:hover{
     background-color: #AA4F01; 
 }
-.product-body button:hover .fas{
+.add-cart button:hover .fas{
     color: #fff; 
 }
-.product-body button:first-child{ border-right: 0px ; }
-.product-body button:last-child{ border-left: 0px ; }
+.add-cart button:first-child{ border-right: 0px ; }
+.add-cart button:last-child{ border-left: 0px ; }
 
-.product-body input[type="number"],
-.product-body .fas{
+.add-cart input[type="number"],
+.add-cart .fas{
     color: #7B6F5A ;
 }
-.product-body input[type="number"]{ font: 1.2rem 'Noto Sans TC'; }
-.product-body .fas{
+.add-cart input[type="number"]{ font: 1.2rem 'Noto Sans TC'; }
+.add-cart .fas{
     width: 100%; 
     line-height: 39px;
 }
 
-.product-body input[type="submit"]{
+.cart-box input[type="submit"]{
     width: 48%;
     background-color: #7B6F5A;
     color: #fff;
     float: right;
 }
-.product-body input[type="submit"]:hover{
+.cart-box input[type="submit"]:hover{
     background-color: #AA4F01;  
 }
 
@@ -749,8 +840,11 @@ h2 span{
     background-color: #7B1B1B;
     padding: .6rem;
 }
-
+.product-body .tag.sub{
+    background-color: #0b3409;
+}
 /* <!-- product END --> */
+
 
 /* <!-- media START --> */
 .section.media{
@@ -779,6 +873,7 @@ h2 span{
     width: 100%;
     vertical-align: bottom;
 }
+
 .media .item a::before{
     content: '';
     position: absolute;
@@ -805,14 +900,17 @@ h2 span{
 }
 
 .media .fas{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 1.3rem;
-    font-size: 3.75rem;
-    line-height: 60px;
+    font-size: 2.5rem;
+    line-height: 40px;
     color: #fff;
 }
+
+
 /* <!-- media END --> */
+
 
 /* <!-- retail-outlet START--> */
 .retail-outlet{
@@ -869,8 +967,6 @@ h2 span{
 .retail-outlet span{
     display: block;
 }
-
-
 /* <!-- retail-outlet END--> */
 
 
@@ -907,117 +1003,109 @@ h2 span{
 /* <!-- page-footer END --> */
 
 /* ========================== 手機分頁 ========================== */
-/* 手機登入分頁 */
 
-/* == 共用 ==*/
-.membership {
+/* <!-- page-login START --> 登入分頁 */
+.page-login {
     background-color: #202020;
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;   /* 限制下方顯示 */
-  }
-  .form-structor .form-body {
+}
+.form-structor .form-body {
     width: 285px;
     margin: auto;
     padding: 1.3rem 0rem;
     opacity: 1;
     visibility: visible;
     -webkit-transition: all .3s ease;
-  }
-  .form-body input {
+}
+.form-body input {
     background-color: #fff;
     padding-left: 1rem;
     width: 100%;
     margin-bottom: 1.3rem;
-  }
-  input::-webkit-input-placeholder {
+}
+input::-webkit-input-placeholder {
     color: #00000066;
-  }
-  .form-structor .form-title, 
-  .form-structor .form-title > span {
+}
+.form-structor .form-title, 
+.form-structor .form-title > span {
     display: block;
-  }
-  .form-structor .form-title > span{
+}
+.form-structor .form-title > span{
     opacity: 0;
     visibility: hidden;
-  }
-  .form-structor .form-title {
+}
+.form-structor .form-title {
     font-size: 1.7rem;
     text-align: center;
-  }
-  .login-area .form-title{ color: #fff; }
-  .signup-area .form-title{ color: #7B6F5A; }
-  
-  
-  .membership .ps-memo{
+}
+.login-area .form-title{ color: #fff; }
+.signup-area .form-title{ color: #7B6F5A; }
+
+.page-login .ps-memo{
     font-size: .9rem;
     line-height: 1.2rem;
     margin-top: -1rem;
-  }
-  .membership .ps-memo::after{
+}
+.page-login .ps-memo::after{
     content: '';
     display: block;
     clear: both;
-  }
-  .ps-memo span{
+}
+.ps-memo span{
     float: left;
     color: #FFD4D4;
-  }
-  .ps-memo a{
+}
+.ps-memo a{
     float: right;
     text-decoration: underline;
     color:#AA4F01;
-  }
-  .form-structor .submit-btn {
+}
+.form-structor .submit-btn {
     display: block;
     margin-top: 3rem;
     width: 100%;
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
-  }
-  .form-structor .signup-area .submit-btn { background-color: #7B1B1B; }
-  .form-structor .login-area .submit-btn {  background-color: #008060; }
-  
-  
-  .trigger .form-body{
+}
+.form-structor .signup-area .submit-btn { background-color: #7B1B1B; }
+.form-structor .login-area .submit-btn {  background-color: #008060; }
+
+.trigger .form-body{
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all .3s ease;
-  }
-  .trigger .form-title {
+}
+.trigger .form-title {
     font-size: 1rem;
     padding: 1rem;
     font-weight: bold;
     -webkit-transition: all .3s ease;
-  }
-  .trigger .form-title > span{
+}
+.trigger .form-title > span{
     opacity: 1;
     visibility: visible;
     font-size: 1.5rem;
-  }
-  
-  /* == 共用 == */
-  
-  
-  /* 點擊前-登入會員====(順序會影響CSS) */
-  .form-structor .login-area {
+}
+
+    /* 點擊前-登入會員(順序會影響CSS) */
+.form-structor .login-area {
     width: 100%;
     position: absolute;
     top: 70px;
     -webkit-transition: all .3s ease;
-    /* outline: 1px solid red; */
-  }
-  
-  /* 點擊前-登入會員====(順序會影響CSS) */
-  
-  
-  /* 點擊後 */
-  .login-area.trigger {
+/* outline: 1px solid red; */
+}
+    /* 點擊前-登入會員(順序會影響CSS) */
+
+    /* 點擊後 */
+.login-area.trigger {
     -webkit-transition: all .3s ease;
-  }
-  .signup-area{
+}
+.signup-area{
     position: absolute;
     top: 35%;
     left: 0;
@@ -1026,62 +1114,67 @@ h2 span{
     z-index: 1;
     -webkit-transition: all .3s ease;
     background-color: #EFEEE9;
-  }
-  .form-structor .signup-area .btm-folder{
+}
+.form-structor .signup-area .btm-folder{
     width: 100%;
     z-index: 5;
     -webkit-transition: all .3s ease;
     /* outline: 1px solid green; */
-  }
-  /* 點擊後 */
-  
-  /* 點擊前-註冊會員(add class="trigger")====(順序會影響CSS) */
-  .signup-area.trigger{
+}
+    /* 點擊後 */
+
+    /* 點擊前-註冊會員( + trigger)(順序會影響CSS) */
+.signup-area.trigger{
     top: 75%;
     -webkit-transition: all .3s ease;
-  }
-  .signup-area.trigger .btm-folder{
+}
+.signup-area.trigger .btm-folder{
     top: 0%;
     -webkit-transition: all .3s ease;
-  }
-  
-  /* 點擊前-註冊會員(add class="trigger")====(順序會影響CSS)  */
-  
-  
-  /* 不規則圖案 */
-  .signup-area::before{
-      content: '';
-      position: absolute;
-      top: -10%;
-      left: 20%;
-      width: 200px;
-      height: 200px;
-      z-index: -1;
-      border-radius: 50%;
-      background-color: #EFEEE9;
-      box-shadow: 400px 80px 0px 100px #EFEEE9,
-                  300px 80px 0px 100px #EFEEE9,
-                  180px 80px 0px 130px #EFEEE9,
-                  -80px 30px 0px 45px #EFEEE9,
-                  -180px 20px 0px 30px #EFEEE9, 
-                  -290px 20px 0px 50px #EFEEE9;
-  }
-  /* 不規則圖案 */
-/* <!-- main-news START --> */
+}
 
+    /* 點擊前-註冊會員( + trigger)(順序會影響CSS)  */
+
+    /* 不規則圖案 */
+.signup-area::before{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: #EFEEE9;
+    box-shadow: 400px 80px 0px 100px #EFEEE9,
+                300px 80px 0px 100px #EFEEE9,
+                180px 80px 0px 130px #EFEEE9,
+                -80px 30px 0px 45px #EFEEE9,
+                -180px 20px 0px 30px #EFEEE9, 
+                -290px 20px 0px 50px #EFEEE9;
+}
+    /* 不規則圖案 */
+/* <!-- page-login END --> 登入分頁 */
+
+
+/* <!-- page-news START --> 消息分頁 */
+    /* <!-- main-news START --> */
 .breadcrumbs ol{
     word-spacing: -5px;
     padding: 1rem 0rem;
 }
-.breadcrumbs li{
+.breadcrumbs li,
+.breadcrumbs li h2{
     display: inline-block;
 }
-.breadcrumbs li:last-child a,
+.breadcrumbs li h2 a,
 .breadcrumbs li:hover a{
     color: #AA4F01;
 }
-.breadcrumbs li:last-child a{
+.breadcrumbs li h2{
     font-weight: 500;
+    font-size: .85rem;
+    padding: 0;
 }
 .breadcrumbs a{
     display: inline-block;
@@ -1152,10 +1245,9 @@ h2 span{
     padding: 0rem 1rem;
 }
 
-/* <!-- main-news END --> */
+    /* <!-- main-news END --> */
 
-
-/* <!-- other-news START --> */
+    /* <!-- other-news START --> */
 .other-news .item + .item{
     margin-top: 2rem;
 }
@@ -1188,14 +1280,149 @@ h2 span{
     font-size: .9rem;
     color: #707070;
 }
+    /* <!-- other-news END --> */
+/* <!-- page-news END --> 消息分頁 */
 
-/* <!-- other-news END --> */
+
+/* <!-- page-product START --> 產品分頁 */
+    /* <!-- main-product START --> */
+    .main-product a{
+        display: block;
+    }
+
+        /* pic-gallery START*/
+    .main-product input[type="radio"]{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+    }
+
+    .main-product .pic-gallery .pic{
+        width: 100%;
+        height: 285px;
+        margin: 0 0 1rem 0;
+        border-radius: 0%;
+        position: relative;
+        /* background-color: pink; */
+    }
+    .pic-gallery .pic img{
+        width: 100%;
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        transition: .5s;
+    }
+
+        /* 縮圖 */
+    .pic-select::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .pic-select label{
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    .pic-select label img{
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    #product-pic1:checked ~ .pic-gallery img:first-of-type{
+        opacity: 1;
+    }
+    #product-pic1:checked ~ .pic-gallery .tab1{
+        outline: 3px solid #AA4F01;
+    }
+    #product-pic2:checked ~ .pic-gallery img:last-of-type{
+        opacity: 1;
+    }
+    #product-pic2:checked ~ .pic-gallery .tab2{
+        outline: 3px solid #AA4F01;
+    }
+        /* pic-gallery END */
+
+        /* info-box START*/
+    .main-product .info{
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .main-product h4,
+    .main-product .note{
+        color: #545454;
+    }
+    .main-product h4{
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 1rem 0rem;
+    }
+    .main-product .note{
+        list-style: disc;
+        padding-left: 1.2rem;
+        line-height: 1.5rem;
+    }
+    
+    .product-body .pay{
+        width: 100%;
+        margin-top: 1rem;
+        background-color: #7B1B1B;
+        border: 1px solid #7B1B1B;
+        box-sizing: border-box;
+        line-height: 2.5rem;
+        color: #fff;
+        text-align: center;
+    }
+    .product-body .pay:hover{
+        background-color: #AA4F01;
+    }
+        /* info-box END*/
+    /* <!-- main-product END --> */
+
+    /* <!-- other-product START --> */
+    .other-product{
+        background-color: #DFD9D1;
+        text-align: center;
+    }
+    .other-product .item{
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid #7B6F5A;
+        padding: 1rem;
+        color: #7B6F5A;
+    }
+    .other-product .item + .item{
+        margin-top: 2rem;
+    }
+
+    .other-product a{
+        display: block;
+    }
+    .other-product h3{
+        padding: 1.3rem 0;
+        color: #7B6F5A;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    .other-product h4{
+        padding: 1.5rem 0;
+        line-height: 1.5;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    /* <!-- other-product END --> */
+
+/* <!-- page-product END --> 產品分頁 */
 
 
 /* ========================== 手機分頁 ========================== */
 
 /*  ///////////////////////////////////////////////////////// 平版 /////////////////////////////////////////////////////////  */
-
 
 @media screen and (min-width: 481px) {
 /* 平版 全域 */
@@ -1258,12 +1485,12 @@ h2 span{
     /* <!-- intro END --> */
 
 
-
     /* <!-- faith START --> */
     .faith{
         background: #EFEEE9 url('../img/laptop/faith.jpg') fixed center/cover;
     }
     /* <!-- faith END --> */
+
 
     /* <!-- principle START --> */
 
@@ -1284,6 +1511,7 @@ h2 span{
         margin-top: 3%;
     }
     /* <!-- principle END --> */
+
 
     /* <!-- news START --> */
     .news .container{
@@ -1346,6 +1574,7 @@ h2 span{
         right: 2%;
     }
     /* <!-- news END --> */
+
 
     /* <!-- subscribe START --> */
     .subscribe .topic{
@@ -1415,7 +1644,8 @@ h2 span{
 
 
 /* ========================== 平版分頁 ========================== */
-    /* <!-- 手機登入頁 START --> */   
+
+/* <!-- page-login START --> 登入分頁 */
     .form-structor .form-body {
         width: 100%;
         max-width: 460px;
@@ -1438,8 +1668,42 @@ h2 span{
     .other-news .pic{
         display: none;
     }
-
     /* <!-- main-news END --> */    /* <!-- other-news END --> */
+/* <!-- page-login END --> 登入分頁 */
+
+
+/* <!-- page-product START --> 產品分頁 */
+    /* main-product START */
+    .main-product .pic-gallery .pic,
+    .pic-gallery .pic img{
+        width: 100%;
+        height: 460px;
+    }
+    /* main-product END */
+
+    /* other-product START */
+    .other-product .container{
+        max-width: 100%;
+    }
+    .other-product .content::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .other-product .item{
+        width: 46%;
+        margin: 2%;
+        box-sizing: border-box;
+        float: left;
+    }
+    .other-product .item + .item{
+        margin-top: 2%;
+    }
+
+    /* other-product END */
+
+/* <!-- page-product END --> 產品分頁 */
+
 
 
 /* ========================== 平版分頁 ========================== */
@@ -1448,16 +1712,31 @@ h2 span{
 
 /* ///////////////////////////////////////////////////////// 電腦版 ///////////////////////////////////////////////////////// */
 
-
 @media screen and (min-width: 769px) {
 
- /* 電腦版 全域 */   
+/* 電腦版 全域 */   
     .container{
         width: 100%;
         max-width: 1200px;
         margin: auto;
         position: relative; 
     }
+
+    /* <!-- wish-list START --> */
+    .wish-list{
+        box-shadow: 0px 0px 5px #a5a5a5,
+                    0px 0px 0px 0px transparent;
+    }
+    /* <!-- wish-list START --> */
+
+    /* <!-- banner START --> */
+    .sm-banner{
+        display: none;
+    }
+    .pc-banner{
+        display: block;
+    }
+    /* <!-- banner END --> */
 
     /* <!-- page-header START --> */
     .page-header .container{
@@ -1526,17 +1805,19 @@ h2 span{
     .user-btn .fa-user{
         font-weight: 900;
     }
-    /* 會員登入蓋版 */
-    .user-form{
+
+        /* 會員登入蓋版 */
+    .pc-login{
         display: block;
         position: fixed;
         z-index: -1;
         height: 100vh;
-        background-color: #000000a3;
+        background-color: #000000b1;
         opacity: 0;
+        visibility: hidden;
         transition: ease-in-out .5s;
     }
-    .user-form .container{
+    .pc-login .container{
         background-color: #EFEEE9;
         max-width: 800px;
         position: absolute;
@@ -1546,26 +1827,26 @@ h2 span{
         transform: translateY(-50%);
         margin: auto;
     }
-    .user-form .content{
+    .pc-login .content{
         width: 100%;
         text-align: center;
         padding: 1.3rem 0rem;
     }
-    .user-form .content::after{
+    .pc-login .content::after{
         content: '';
         display: block;
         clear: both;
     }
-    .user-form .item{
+    .pc-login .item{
         width: 50%;
         float: left;
         position: relative;
     }
-    .user-form form{
+    .pc-login form{
         width: 70%;
         padding: 0px 15%;
     }
-    .user-form .item:first-child::after{
+    .pc-login .item:first-child::after{
         content: '';
         position: absolute;
         top: 0;
@@ -1573,33 +1854,33 @@ h2 span{
         right: -2px;
         border-left:4px dashed #70707018 ;
     }
-    .user-form input{
+    .pc-login input{
         width: 100%;
         padding-left: 1rem;
         box-sizing: border-box;
         margin-bottom: 1.3rem;
     }
-    .user-form input:nth-child(2){
+    .pc-login input:nth-child(2){
         margin-bottom: 0rem;
     }
-    .user-form input[type="submit"]{
+    .pc-login input[type="submit"]{
         margin-top: 3rem;
         color: #fff;
         padding-left: 0rem;
     }
-    .user-form .item:first-child input[type="submit"]{
+    .pc-login .item:first-child input[type="submit"]{
         background-color: #7B1B1B;
     }
-    .user-form .item:last-child input[type="submit"]{
+    .pc-login .item:last-child input[type="submit"]{
         background-color: #008060;
     }
 
-    .user-form .ps-memo{
+    .pc-login .ps-memo{
         font-size: .9rem;
         line-height: 1.2rem;
         margin-bottom: 1.3rem;
     }
-    .user-form .ps-memo::after{
+    .pc-login .ps-memo::after{
         content: '';
         display: block;
         clear: both;
@@ -1613,13 +1894,14 @@ h2 span{
         text-decoration: underline;
     }
 
-    /* 開關登入會員視窗 */
-    #user-controler:checked ~ .user-form{
+        /* 開關登入會員視窗 */
+    #user-controler:checked ~ .pc-login{
         z-index: 8;
         opacity: 1;
+        visibility: visible;
     }
 
-    .user-form .close-btn{
+    .pc-login .close-btn{
         position: absolute;
         top: 0;
         right: 0;
@@ -1662,8 +1944,8 @@ h2 span{
 
 
     /* <!-- intro START --> */
-    /* 排版 */
 
+        /* 排版 */
     .intro .item{
         max-width: 800px;
         margin: auto;
@@ -1686,6 +1968,7 @@ h2 span{
     }
     /* <!-- intro END --> */
 
+
     /* <!-- faith START --> */
     .faith{
         background: #EFEEE9 url('../img/pc/faith.jpg') fixed center/cover; 
@@ -1694,6 +1977,7 @@ h2 span{
         padding: 8rem 4rem;
     }
     /* <!-- faith END --> */
+
 
     /* <!-- principle START --> */
     .section.principle{
@@ -1711,6 +1995,7 @@ h2 span{
         margin: auto;
     }
     /* <!-- principle END --> */
+
 
     /* <!-- news START --> */
     .news .container{
@@ -1781,9 +2066,8 @@ h2 span{
         color: #fff;
         background-color: #7B6F5A;
     }
-
-
     /* <!-- news END --> */
+
 
     /* <!-- product START --> */
     .product .container{
@@ -1800,6 +2084,7 @@ h2 span{
     }
     /* <!-- product END --> */
 
+
     /* <!-- media START --> */
     .media{
         max-width: 1920px;
@@ -1814,6 +2099,7 @@ h2 span{
         width: 25%;
     }
     /* <!-- media END --> */
+
 
     /* <!-- subscribe START --> */
     .subscribe input[type="email"]{
@@ -1838,14 +2124,18 @@ h2 span{
     /* <!-- retail-outlet END--> */
 
 
-
-    
     
 /* ========================== 電腦分頁 ========================== */
-   /* 手機登入頁 */
-    .membership{
+
+/* <!-- page-login START --> 登入分頁 */
+    .page-login{
         display: none;
     }
+/* <!-- page-login END --> 登入分頁 */
+
+
+/* <!-- page-news START --> 消息分頁 */
+
     /* <!-- main-news START --> */    /* <!-- other-news START --> */
     .page-news .container{
         padding: 0rem 1rem;
@@ -1874,8 +2164,72 @@ h2 span{
         color: #fff;
         background-color: #7B6F5A;
     }
- 
     /* <!-- main-news END --> */    /* <!-- other-news END --> */
+/* <!-- page-news END --> 消息分頁 */
+
+
+/* <!-- page-product START --> 產品分頁 */
+
+    /* <!-- main-product START --> */  
+    .page-product .container{
+        max-width: 1200px;
+        padding: 0rem 1rem;
+        box-sizing: border-box;
+    }
+    .product-body{
+        width: 100%;
+    }
+    .product-body::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .pic-gallery,
+    .info-box{
+        float: left;
+    }
+    .pic-gallery{
+        width: 50%;
+        margin-right: 3%;
+    }
+    .info-box{ width: 47%; }
+
+    .main-product .pic-gallery .pic,
+    .pic-gallery .pic img{
+        width: 100%;
+        height: 550px;  
+    }
+    .pic-gallery .pic img{ object-fit: cover; }
+
+    .product-body h2{
+        padding-top: 0;
+        text-align: left;
+    }
+    .main-product .product-body .cart-box,
+    .main-product .product-body .pay{
+        max-width: 350px;
+    }
+    /* <!-- main-product END --> */  
+
+
+    /* <!-- other-product START --> */
+    .other-product .container{
+        max-width: 1200px;
+    }
+    .other-product .item{
+        width: 30.333333%;
+        margin: 1.5%;
+        box-sizing: border-box;
+        float: left;
+    }
+    .other-product .item + .item{
+        margin-top: 1.5%;
+    }
+
+    /* <!-- other-product END --> */
+
+/* <!-- page-product END --> 產品分頁 */
+
 
 /* ========================== 電腦分頁 ========================== */   
 

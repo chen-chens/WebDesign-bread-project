@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        
+
+    .media-list .item{
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        z-index: 10;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #00000087;
+        transition: .5s;
+    }
+    .media-list .item:target{
+        left: 0%;
+    }
+
+    iframe{
+        width: 60%;
+        height: 80%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        /* display: none; */
+    }
+    </style>
+</head>
+<body>
+    <section class="section media">
+        <div class="container">
+            <div class="topic">
+                <h2>影音媒體<span id="to-media"></span></h2>
+            </div>
+            <div class="content">
+                <div class="item video">
+                    <div class="pic">
+                        <a href="#youtube1">
+                            <img src="img/phone/media1.png" alt="麥面包一窺一粒麥的源頭。">
+                        </a>
+                    </div>
+                    <div class="txt">
+                        <i class="fas fa-play-circle"></i>
+                        <p>麥面包一窺一粒麥的源頭。</p>
+                    </div>
+                </div>
+                <div class="item sns">
+                    <div class="pic">
+                        <a href="#youtube2">
+                            <img src="img/phone/media2.png" alt="感謝好生活雜誌報導《誠意好麵包》">
+                        </a>
+                    </div>
+                    <div class="txt">
+                        <i class="fas fa-play-circle"></i>
+                        <p>感謝好生活雜誌報導《誠意好麵包》</p>
+                    </div>
+                </div>
+                <div class="item sns">
+                    <div class="pic">
+                        <a href="#youtube3">
+                            <img src="img/phone/media3.png" alt="《麥面包小知識》白麵包與全麥麵包差在哪?">
+                        </a>
+                    </div>
+                    <div class="txt">
+                        <i class="fas fa-play-circle"></i>
+                        <p>《麥面包小知識》白麵包與全麥麵包差在哪?</p>
+                    </div>
+                </div>
+                <div class="item sns">
+                    <div class="pic">
+                        <a href="#youtube4">
+                            <img src="img/phone/media4.png" alt="採用來自法國Brie，質軟味鹹，奶香濃郁。">
+                        </a>
+                    </div>
+                    <div class="txt">
+                        <i class="fas fa-play-circle"></i>
+                        <p>採用來自法國Brie，質軟味鹹，奶香濃郁。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="media-list">
+        <div class="item" id="youtube1">       
+            <iframe src="https://www.youtube.com/embed/y8vLjPctrcU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="item" id="youtube2">       
+            <iframe src="https://www.youtube.com/embed/EGbNI26PPYg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube2"></iframe>
+        </div>
+        <div class="item" id="youtube3">       
+            <iframe src="https://www.youtube.com/embed/418KSrmpMwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube3"></iframe>
+        </div>
+        <div class="item" id="youtube4">       
+            <iframe src="https://www.youtube.com/embed/BU7ASp5TIGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube4"></iframe>
+        </div>
+    </section>
+
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.
+    </div>
+</body>
+</html>
