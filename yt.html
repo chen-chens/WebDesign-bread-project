@@ -9,12 +9,32 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        
+        *{
+            /* outline: 1px solid red; */
+        }
+    .media-list .close{
+        display:block;
+    }   
+    .media-list .close::before{
+        content: '\f00d';
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;  
+        font-size: 3rem;
+        color: rgb(133, 133, 133); 
+        padding: 3%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
 
     .media-list .item{
+        text-align: right;
         position: fixed;
-        top: 70px;
-        left: -100%;
+        top: -100%;
+        left: 0%;
         z-index: 10;
         width: 100%;
         height: calc(100vh - 70px);
@@ -22,7 +42,7 @@
         transition: .5s;
     }
     .media-list .item:target{
-        left: 0%;
+        top: 70px;
     }
 
     iframe{
@@ -34,7 +54,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        /* display: none; */
+        z-index: 2;
     }
     </style>
 </head>
@@ -96,16 +116,20 @@
 
     <section class="media-list">
         <div class="item" id="youtube1">       
-            <iframe src="https://www.youtube.com/embed/y8vLjPctrcU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="v1" src="https://www.youtube.com/embed/y8vLjPctrcU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="#" class="close" id="btn1"></a>
         </div>
         <div class="item" id="youtube2">       
             <iframe src="https://www.youtube.com/embed/EGbNI26PPYg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube2"></iframe>
+            <a href="#" class="close"></a>
         </div>
         <div class="item" id="youtube3">       
             <iframe src="https://www.youtube.com/embed/418KSrmpMwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube3"></iframe>
+            <a href="#" class="close"></a>
         </div>
         <div class="item" id="youtube4">       
             <iframe src="https://www.youtube.com/embed/BU7ASp5TIGo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="youtube4"></iframe>
+            <a href="#" class="close"></a>
         </div>
     </section>
 
@@ -114,5 +138,33 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laudantium, voluptates maxime sunt recusandae facilis voluptate nobis minus architecto atque officiis illum corrupti quae natus ex sint ipsum libero quas.
     </div>
+    <script>
+    // 當點選關閉鍵，撥放中的youtube停止播放
+
+        // 寫法一: 缺點每次關閉就要重新reload
+        // var stopButton = document.getElementById('btn1');
+
+        // stopButton.onclick = function() {
+        //     var myPlayer = document.getElementById('v1'); 
+        //     myPlayer.setAttribute("src", "");
+        //     myPlayer.setAttribute("src", "https://www.youtube.com/embed/y8vLjPctrcU");
+        // }; 
+
+
+
+        // 寫法二: 缺點每次關閉就要重新reload
+        // 目前只取得第一個close元素
+        const videos = document.querySelectorAll('iframe');
+        const close = document.querySelector('.close');
+
+        close.addEventListener('click', () => {
+        videos.forEach(i => {
+            let source = i.src;
+            i.src = '';
+            i.src = source;
+            });
+        });
+
+    </script>
 </body>
 </html>
