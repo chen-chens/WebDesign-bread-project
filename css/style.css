@@ -1,6 +1,7 @@
 
 *{
     text-decoration: none;
+    scroll-behavior: smooth;
     /* outline: 1px solid red; */
 }
 body{
@@ -121,7 +122,7 @@ button,label{
     /* 細項 */
 .page-header h1 a{
     width: 125px;
-    padding: 15px 0px;
+    padding: 15px;
     margin: auto;
 }
 .page-header h1 img{
@@ -1511,7 +1512,7 @@ input::-webkit-input-placeholder {
 
     /* <!-- story START --> */    
     .section-fixed.story{
-        background: url('../img/pc/banner1.jpg') center center/ cover;  
+        background: url('../img/pc/banner.jpg') center center/ cover;  
         padding: 80vh 0 0 0;
     }
     .story .container{
@@ -1856,11 +1857,14 @@ input::-webkit-input-placeholder {
         line-height: 70px;
     }
 
-    .menu li:hover{
+    /* .menu .active{
+        color: #ff9900;
         border-bottom: 5px solid #ff9900;
-    }
+    } */
     .menu li:hover a{
         color: #ff9900;
+        border-bottom: 5px solid #ff9900;
+
     }
 
     .main-nav label{
