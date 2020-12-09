@@ -364,7 +364,7 @@ h2 span{
     margin: auto;
     text-align: justify;
     line-height: 1.3rem;
-    color: #9E9E9E;
+    color: #7b6f5acf;
 }
 
     /* 不規則圖案 */
@@ -399,12 +399,14 @@ h2 span{
     font-weight: 500;
     text-align: center;
     padding: .6rem 0rem;
+    color:#bd8c8c;
 }
 .story p{
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     text-indent: 2.2rem;
     padding-bottom: 1.3rem;
+    color: #aa9999d7;
 }
 
 .story .more,
@@ -419,7 +421,7 @@ h2 span{
     line-height: 80px;
     font-size: .9rem;
     letter-spacing: 0;
-    color: #d5b4b4;;
+    color: #d5b4b4;
     position: relative;
 }
 .story .more::after{
@@ -553,7 +555,8 @@ h2 span{
     padding: 1rem 0rem;
 }
 .intro .item .txt{
-    color: #9E9E9E;
+    color: #c4c4c4;
+    font-weight: 400;
     line-height: 1.3rem;
     text-indent: 2.2rem;
     padding: 1.3rem 0rem;
@@ -661,7 +664,7 @@ h2 span{
     background-color: #dad4ca99;
     border-bottom:2px solid #fff ;
     box-sizing: border-box;
-    color: #9E9E9E;
+    color: #7c7c7c;
     font-weight: 400;
     padding: 2rem 0rem 2rem .5rem;
     transition: all .5s;
@@ -1575,6 +1578,9 @@ input::-webkit-input-placeholder {
     }
     .intro .item:nth-child(even){
         direction: rtl;
+    }
+    .intro .item:nth-child(even) .txt{
+        direction: ltr;
     }
     .intro .txt p{
         padding: 2rem;
