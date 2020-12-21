@@ -1028,6 +1028,11 @@ h2 span{
 .retail-outlet .pic{
     width: 30%;
 }
+.retail-outlet .google-map{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+}
 .retail-outlet .pic img{
     width: 100%;
     vertical-align: middle;

@@ -115,3 +115,53 @@
 // offsetHeight = Element's height w/o margin = content'height + padding + border
     // 補充
     // offsetWidth = Element's width w/o margin = content'width + padding + border
+
+
+
+// GOOGLE MAP=========================================================================================
+    function initMap() {
+        const store1 = { lat: 24.947208884556762, lng: 121.22794941111651 };
+        const store2 = { lat: 25.057202461255795, lng:121.61642449468944 };
+        const store3 = { lat: 24.1619544286101, lng: 120.69903240553191 };
+        const store4 = { lat: 22.987400729988707, lng:120.18628811107844 };
+        // 1
+        const map = new google.maps.Map(document.getElementById("store1"), {
+            center: store1,
+            zoom: 18,
+        });
+        const marker = new google.maps.Marker({
+            position: store1,
+            map: map,
+        });
+
+
+        // 2
+        const map2 = new google.maps.Map(document.getElementById("store2"), {
+            center: store2,
+            zoom: 18,
+        });
+        // const marker2 = new google.maps.Marker({
+        //     position: store2,
+        //     map: map,
+        // });
+
+        // // 3
+        const map3 = new google.maps.Map(document.getElementById("store3"), {
+            center: store3,
+            zoom: 18,
+        });
+        // const marker3 = new google.maps.Marker({
+        //     position: store3,
+        //     map: map,
+        // });
+
+        // 4
+        const map4 = new google.maps.Map(document.getElementById("store4"), {
+            center: store4,
+            zoom: 18,
+        });
+        // const marker4 = new google.maps.Marker({
+        //     position: store4,
+        //     map: map,
+        // });
+    }

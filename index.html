@@ -731,71 +731,75 @@
     <!-- ////////////////////////影音媒體 結束//////////////////////// -->
 
 
-    <!-- ////////////////////////門市據點 開始//////////////////////// -->
+        <!-- ////////////////////////門市據點 開始//////////////////////// -->
     <!-- retail-outlet START-->
-        <section class="section retail-outlet">
-            <div class="container">
-                <div class="topic">
-                    <h2>門市據點<span id="to-retail-outlet"></span></h2>
+    <section class="section retail-outlet">
+        <div class="container">
+            <div class="topic">
+                <h2>門市據點<span id="to-retail-outlet"></span></h2>
+            </div>
+            <div class="content">
+                <div class="item">
+                    <div class="pic">
+                        <img src="img/phone/store1.jpg" alt="桃園健行總店">
+                    </div>
+                    <div class="txt">
+                        <h3>桃園健行總店</h3>
+                        <ul>
+                            <li>電話:03-458-6226</li>
+                            <li>地址:桃園市中壢區龍岡路二段12號</li>
+                            <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
+                        </ul>
+                    </div>
+                    <div id="store1" class="google-map"></div>
                 </div>
-                <div class="content">
-                    <div class="item">
-                        <div class="pic">
-                            <img src="img/phone/store1.jpg" alt="桃園健行總店">
-                        </div>
-                        <div class="txt">
-                            <h3>桃園健行總店</h3>
-                            <ul>
-                                <li>電話:03-458-6226</li>
-                                <li>地址:桃園市中壢區龍岡路二段12號</li>
-                                <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
-                            </ul>
-                        </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="img/phone/store2.jpg" alt="台北南港店">
                     </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="img/phone/store2.jpg" alt="台北南港店">
-                        </div>
-                        <div class="txt">
-                            <h3>台北南港店</h3>
-                            <ul>
-                                <li>電話:02-2725-5201</li>
-                                <li>地址:台北市南港區經貿路三巷11號</li>
-                                <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
-                            </ul>
-                        </div>
+                    <div class="txt">
+                        <h3>台北南港店</h3>
+                        <ul>
+                            <li>電話:02-2725-5201</li>
+                            <li>地址:台北市南港區經貿路三巷11號</li>
+                            <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
+                        </ul>
                     </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="img/phone/store3.jpg" alt="台中北屯店">
-                        </div>
-                        <div class="txt">
-                            <h3>台中北屯店</h3>
-                            <ul>
-                                <li>電話:04-2233-4073</li>
-                                <li>地址:台中市北屯區天祥街二弄20號</li>
-                                <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
-                            </ul>
-                        </div>
+                    <div id="store2" class="google-map"></div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="img/phone/store3.jpg" alt="台中北屯店">
                     </div>
-                    <div class="item">
-                        <div class="pic">
-                            <img src="img/phone/store4.jpg" alt="台南安平店">
-                        </div>
-                        <div class="txt">
-                            <h3>台南安平店</h3>
-                            <ul>
-                                <li>電話:06-293-9550</li>
-                                <li>地址:台南市中西區中華路二段17號</li>
-                                <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
-                            </ul>
-                        </div>
+                    <div class="txt">
+                        <h3>台中北屯店</h3>
+                        <ul>
+                            <li>電話:04-2233-4073</li>
+                            <li>地址:台中市北屯區天祥街二弄20號</li>
+                            <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
+                        </ul>
                     </div>
+                    <div id="store3" class="google-map"></div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="img/phone/store4.jpg" alt="台南安平店">
+                    </div>
+                    <div class="txt">
+                        <h3>台南安平店</h3>
+                        <ul>
+                            <li>電話:06-293-9550</li>
+                            <li>地址:台南市中西區中華路二段17號</li>
+                            <li>營業時間:週二至週日<span> 13:00-19:00(週一公休)</span></li>
+                        </ul>
+                    </div>
+                    <div id="store4" class="google-map"></div>
                 </div>
             </div>
-        </section>
-    <!-- retail-outlet END-->
-    <!-- ////////////////////////門市據點 結束//////////////////////// -->
+        </div>
+    </section>
+<!-- retail-outlet END-->
+<!-- ////////////////////////門市據點 結束//////////////////////// -->
 
 
     <!-- ////////////////////////頁尾 開始//////////////////////// -->
@@ -837,6 +841,11 @@
 
     <script src="js/script.js"></script>
     <script src="plugin/retina.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAZJLV1mDH7VR_0zmT_-lpOtCI330fMgZQ&callback=initMap&libraries=&v=weekly"
+    defer
+    ></script>
     <script>
         // 當點選關閉鍵，撥放中的youtube停止播放(拿掉src，再重新放入)
 
